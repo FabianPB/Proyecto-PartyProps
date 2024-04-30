@@ -121,6 +121,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "ENTRAR";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCerrar
             // 

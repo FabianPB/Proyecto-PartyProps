@@ -82,5 +82,19 @@ namespace Projectpt1
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "ADMIN" && txtContraseña.Text == "ADMIN")
+            {
+
+                Form formularioAplicacion = new APLICACION();
+                formularioAplicacion.Show();
+            }
+            else
+            {
+                MessageBox.Show("USUARIO O CONTRASEÑA INCORRECTOS");
+            }
+        }
     }
 }
