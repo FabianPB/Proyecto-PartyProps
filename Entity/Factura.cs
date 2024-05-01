@@ -16,6 +16,6 @@ namespace Entity
         public DateTime fechaFacturacion { get; set; }
 
         public DateTime fechaDevolucion { get; set; }   
-        public Cliente Cliente { get; set; }    
+         
     }
 }

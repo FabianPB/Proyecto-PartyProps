@@ -9,9 +9,9 @@ namespace Entity
     public class Compra
     {
         public string idProveedor {  get; set; }   
-        public double Descripcion { get; set; }
+        public string Descripcion { get; set; }
 
-        public int telefono { get; set; }
+        public double telefono { get; set; }
 
         
     }
