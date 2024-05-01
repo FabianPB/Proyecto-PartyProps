@@ -13,7 +13,7 @@ namespace BLL
         public string Descripcion {  get; set; }    
         public double precioAlquiler { get; set; }
         public int Existencias { get; set; }
-        public Categoria categoria { get; set; }    
+        
 
 
 

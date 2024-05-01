@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class FacturaAlquiler
+    public class Factura
+
     {
         public string idFactura {  get; set; }  
         public double montoPago { get; set; }
