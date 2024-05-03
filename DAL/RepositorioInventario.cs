@@ -28,6 +28,32 @@ namespace DAL
             var articulo = new Articulo(idArticulo, nombreArticulo, descripcion, precioAlquiler, existencias);
             return articulo;
         }
-        
+        public Factura EncontrarFactura(string cedula)
+        {
+            var FileFactura = "./Facturas.csv";
+            var opciones = new FileStreamOptions()
+            {
+                Access = FileAccess.Read
+            };
+
+            using var leer = new StreamReader(FileFactura, opciones);
+            var linea = leer.ReadLine();
+            while (linea != null)
+            {
+                var lineaValor = linea.Split(';');
+                var idFactura = lineaValor[0];
+                var nombre = lineaValor[1];
+                var telefono = lineaValor[2];
+                var fechaingreso = DateTime.Parse(lineaValor[3]);
+                var repartidor = new Repartidor(cedulaRepartidor, nombre, telefono, fechaingreso);
+
+                if (cedulaRepartidor == cedula)
+                {
+                    return repartidor;
+                }
+                linea = leer.ReadLine();
+            }
+            return null;
+        }
     }
 }

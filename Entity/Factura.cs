@@ -15,7 +15,17 @@ namespace Entity
 
         public DateTime fechaFacturacion { get; set; }
 
-        public DateTime fechaDevolucion { get; set; }   
-         
+        public DateTime fechaDevolucion { get; set; }
+
+        public Factura(string idFactura, double montoPago, double montoCambio, DateTime fechaFacturacion, DateTime fechaDevolucion)
+        {
+            this.idFactura = idFactura;
+            this.montoPago = montoPago;
+            this.montoCambio = montoCambio;
+            this.fechaFacturacion = fechaFacturacion;
+            this.fechaDevolucion = fechaDevolucion;
+        }
     }
+
+
 }
