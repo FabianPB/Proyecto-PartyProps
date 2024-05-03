@@ -18,5 +18,15 @@ namespace Entity
 
         public string nombre { get; set; }  
         public string correo {  get; set; }
+
+        public Usuario(string rol, string idUsuario, string contraseña, string userName, string nombre, string correo)
+        {
+            this.rol = rol;
+            this.idUsuario = idUsuario;
+            this.contraseña = contraseña;
+            this.userName = userName;
+            this.nombre = nombre;
+            this.correo = correo;
+        }
     }
 }

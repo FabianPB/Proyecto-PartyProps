@@ -12,6 +12,11 @@ namespace Entity
         public string descripcion { get; set; }
         public double telefono { get; set; }
 
-        
+        public Compra(string idProveedor, string descripcion, double telefono)
+        {
+            this.idProveedor = idProveedor;
+            this.descripcion = descripcion;
+            this.telefono = telefono;
+        }
     }
 }
