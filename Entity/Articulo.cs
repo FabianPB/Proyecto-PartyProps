@@ -8,14 +8,20 @@ namespace BLL
 {
     public class Articulo
     {
-        public string idArticulo {  get; set; }
+        public string idArticulo { get; set; }
         public string nombreArticulo { get; set; }
-        public string Descripcion {  get; set; }    
+        public string descripcion { get; set; }
         public double precioAlquiler { get; set; }
-        public int Existencias { get; set; }
-        
+        public int existencias { get; set; }
 
-
-
+        public Articulo(string idArticulo, string nombreArticulo, string descripcion, double precioAlquiler, int existencias)
+        {
+            this.idArticulo = idArticulo;
+            this.nombreArticulo = nombreArticulo;
+            this.descripcion = descripcion;
+            this.precioAlquiler = precioAlquiler;
+            this.existencias = existencias;
+        }
+      
     }
 }

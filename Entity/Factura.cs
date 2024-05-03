@@ -11,7 +11,7 @@ namespace Entity
     {
         public string idFactura {  get; set; }  
         public double montoPago { get; set; }
-        public double MontoCambio {  get; set; }
+        public double montoCambio {  get; set; }
 
         public DateTime fechaFacturacion { get; set; }
 
