@@ -96,5 +96,7 @@ namespace Projectpt1
                 MessageBox.Show("USUARIO O CONTRASEÑA INCORRECTOS");
             }
         }
+
+       
     }
 }

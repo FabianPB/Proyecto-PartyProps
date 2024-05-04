@@ -54,6 +54,18 @@
     <Compile Include="APLICACION.Designer.cs">
       <DependentUpon>APLICACION.cs</DependentUpon>
     </Compile>
+    <Compile Include="ARTICULOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARTICULOS.Designer.cs">
+      <DependentUpon>ARTICULOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTARIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INVENTARIO.Designer.cs">
+      <DependentUpon>INVENTARIO.cs</DependentUpon>
+    </Compile>
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,8 +74,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RESERVAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RESERVAS.Designer.cs">
+      <DependentUpon>RESERVAS.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="APLICACION.resx">
       <DependentUpon>APLICACION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARTICULOS.resx">
+      <DependentUpon>ARTICULOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INVENTARIO.resx">
+      <DependentUpon>INVENTARIO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
@@ -77,6 +101,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RESERVAS.resx">
+      <DependentUpon>RESERVAS.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
