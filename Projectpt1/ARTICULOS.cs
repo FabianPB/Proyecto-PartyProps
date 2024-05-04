@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Projectpt1
 {
-    public partial class Form1 : Form
+    public partial class Articulos : Form
     {
-        public Form1()
+        public Articulos()
         {
             InitializeComponent();
         }
+
+       
     }
 }

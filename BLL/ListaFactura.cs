@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class Categoria
+    internal class ListaFactura
     {
-        public string Descripcion {  get; set; }    
-        public string idCategoria { get; set;}
-
 
     }
 }
