@@ -1,4 +1,4 @@
-﻿namespace Presentacion { 
+﻿
     partial class APLICACION
     {
         /// <summary>

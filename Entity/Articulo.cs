@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL
+namespace Entity
 {
     public class Articulo
     {
@@ -22,6 +22,13 @@ namespace BLL
             this.precioAlquiler = precioAlquiler;
             this.existencias = existencias;
         }
-      
+        public Articulo()
+        {
+
+        }
+        public override string ToString()
+        {
+            return $"{idArticulo},{nombreArticulo},{descripcion},{precioAlquiler},{existencias} ";
+        }
     }
 }

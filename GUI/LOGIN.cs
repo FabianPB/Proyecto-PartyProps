@@ -89,7 +89,6 @@ namespace Presentacion
             {
 
                 Form formularioAplicacion = new APLICACION();
-                this.Hide();
                 formularioAplicacion.Show();
             }
             else

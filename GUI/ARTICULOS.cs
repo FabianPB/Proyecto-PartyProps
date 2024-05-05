@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Reservas : Form
+    public partial class Articulos : Form
     {
-        public Reservas()
+        public Articulos()
         {
             InitializeComponent();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

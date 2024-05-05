@@ -1,5 +1,5 @@
-﻿using BLL;
-
+﻿
+using Entity;
 namespace DAL
 {
     public class RepositorioInventario

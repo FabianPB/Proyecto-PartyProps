@@ -14,10 +14,6 @@ namespace Presentacion
 {
     public partial class APLICACION : Form
     {
-
-
-
-
         public APLICACION()
         {
             InitializeComponent();
@@ -77,7 +73,7 @@ namespace Presentacion
 
         private void btnReservas_Click(object sender, EventArgs e)
         {
-            //AbrirFormHija(new Re);
+            AbrirFormHija(new Reservas());
         }
 
         private void btnInventario_Click(object sender, EventArgs e)

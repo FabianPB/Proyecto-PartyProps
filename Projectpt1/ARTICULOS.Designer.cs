@@ -1,4 +1,4 @@
-﻿namespace Projectpt1
+﻿namespace Presentacion
 {
     partial class Articulos
     {
@@ -28,187 +28,202 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            Txt_Id = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            txtNombre = new System.Windows.Forms.TextBox();
+            label4 = new System.Windows.Forms.Label();
+            txtDescripcion = new System.Windows.Forms.TextBox();
+            label5 = new System.Windows.Forms.Label();
+            txtPrecio = new System.Windows.Forms.TextBox();
+            label6 = new System.Windows.Forms.Label();
+            txtCantidad = new System.Windows.Forms.TextBox();
+            btnRegistrar = new System.Windows.Forms.Button();
+            btnCancelar = new System.Windows.Forms.Button();
+            SuspendLayout();
             // 
-            // textBox1
+            // Txt_Id
             // 
-            this.textBox1.Location = new System.Drawing.Point(202, 145);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 22);
-            this.textBox1.TabIndex = 0;
+            Txt_Id.Location = new System.Drawing.Point(177, 136);
+            Txt_Id.Margin = new System.Windows.Forms.Padding(2);
+            Txt_Id.Name = "Txt_Id";
+            Txt_Id.Size = new System.Drawing.Size(149, 23);
+            Txt_Id.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(158, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ID :";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label1.Location = new System.Drawing.Point(138, 135);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(30, 19);
+            label1.TabIndex = 1;
+            label1.Text = "ID :";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(313, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(343, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Registro de Artículos";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label2.Location = new System.Drawing.Point(274, 35);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(279, 32);
+            label2.TabIndex = 2;
+            label2.Text = "Registro de Artículos";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(556, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nombre :";
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label3.Location = new System.Drawing.Point(486, 135);
+            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(72, 19);
+            label3.TabIndex = 3;
+            label3.Text = "Nombre :";
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(649, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 22);
-            this.textBox2.TabIndex = 4;
+            txtNombre.Location = new System.Drawing.Point(568, 134);
+            txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new System.Drawing.Size(148, 23);
+            txtNombre.TabIndex = 4;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(79, 230);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 21);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Descripción :";
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label4.Location = new System.Drawing.Point(69, 216);
+            label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(97, 19);
+            label4.TabIndex = 5;
+            label4.Text = "Descripción :";
             // 
-            // textBox3
+            // txtDescripcion
             // 
-            this.textBox3.Location = new System.Drawing.Point(202, 229);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 22);
-            this.textBox3.TabIndex = 6;
+            txtDescripcion.Location = new System.Drawing.Point(177, 215);
+            txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new System.Drawing.Size(149, 23);
+            txtDescripcion.TabIndex = 6;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(479, 232);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 21);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Precio de Alquiler :";
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label5.Location = new System.Drawing.Point(419, 217);
+            label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(136, 19);
+            label5.TabIndex = 7;
+            label5.Text = "Precio de Alquiler :";
             // 
-            // textBox4
+            // txtPrecio
             // 
-            this.textBox4.Location = new System.Drawing.Point(649, 231);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(168, 22);
-            this.textBox4.TabIndex = 8;
+            txtPrecio.Location = new System.Drawing.Point(568, 217);
+            txtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new System.Drawing.Size(148, 23);
+            txtPrecio.TabIndex = 8;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(94, 326);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 21);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Cantidad :";
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label6.Location = new System.Drawing.Point(82, 306);
+            label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(85, 19);
+            label6.TabIndex = 9;
+            label6.Text = "Cantidad :";
             // 
-            // textBox5
+            // txtCantidad
             // 
-            this.textBox5.Location = new System.Drawing.Point(202, 325);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 22);
-            this.textBox5.TabIndex = 10;
+            txtCantidad.Location = new System.Drawing.Point(177, 305);
+            txtCantidad.Margin = new System.Windows.Forms.Padding(2);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new System.Drawing.Size(149, 23);
+            txtCantidad.TabIndex = 10;
             // 
-            // button1
+            // btnRegistrar
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(649, 404);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 39);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = false;
+            btnRegistrar.BackColor = System.Drawing.Color.Lime;
+            btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnRegistrar.FlatAppearance.BorderSize = 0;
+            btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnRegistrar.ForeColor = System.Drawing.Color.Black;
+            btnRegistrar.Location = new System.Drawing.Point(568, 378);
+            btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new System.Drawing.Size(111, 37);
+            btnRegistrar.TabIndex = 11;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.UseVisualStyleBackColor = false;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(499, 404);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 39);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
+            btnCancelar.BackColor = System.Drawing.Color.Red;
+            btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnCancelar.FlatAppearance.BorderSize = 0;
+            btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnCancelar.ForeColor = System.Drawing.Color.Black;
+            btnCancelar.Location = new System.Drawing.Point(436, 378);
+            btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new System.Drawing.Size(111, 37);
+            btnCancelar.TabIndex = 12;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
             // Articulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(904, 511);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Articulos";
-            this.Text = "ARTICULOS";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.Silver;
+            ClientSize = new System.Drawing.Size(791, 479);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnRegistrar);
+            Controls.Add(txtCantidad);
+            Controls.Add(label6);
+            Controls.Add(txtPrecio);
+            Controls.Add(label5);
+            Controls.Add(txtDescripcion);
+            Controls.Add(label4);
+            Controls.Add(txtNombre);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(Txt_Id);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(2);
+            Name = "Articulos";
+            Text = "ARTICULOS";
+            Load += Articulos_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Id;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
