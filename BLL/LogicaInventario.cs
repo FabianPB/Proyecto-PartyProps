@@ -24,7 +24,7 @@ namespace BLL
         {
             datos.EliminarArticulo(articulo);
         }
-        public List<Articulo> ListaArticulo (string idArticulo)
+        public List<Articulo> ListaArticulo ()
         {
             return datos.EncontrarArticulos();
         }

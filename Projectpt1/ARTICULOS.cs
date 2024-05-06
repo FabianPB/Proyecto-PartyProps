@@ -23,7 +23,7 @@ namespace Presentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if(ValidarVacios() == false )
+            if (ValidarVacios() == false)
             {
                 MessageBox.Show("Error campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -38,7 +38,7 @@ namespace Presentacion
                 MessageBox.Show("El nombre solo permite letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             if (ValidarNumero(Txt_Id.Text))
             {
                 articulo.idArticulo = Txt_Id.Text;
@@ -49,7 +49,7 @@ namespace Presentacion
                 return;
             }
             articulo.descripcion = txtDescripcion.Text;
-            if (ValidarNumero(txtPrecio.Text) )
+            if (ValidarNumero(txtPrecio.Text))
             {
                 articulo.precioAlquiler = double.Parse(txtPrecio.Text);
             }
@@ -58,7 +58,7 @@ namespace Presentacion
                 MessageBox.Show("El precio debe ser solo números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (ValidarNumero(txtCantidad.Text) && int.Parse(txtCantidad.Text)>0)
+            if (ValidarNumero(txtCantidad.Text) && int.Parse(txtCantidad.Text) > 0)
             {
                 articulo.existencias = int.Parse(txtCantidad.Text);
             }
@@ -85,7 +85,7 @@ namespace Presentacion
         {
             foreach (var item in validar)
             {
-                if (!Char.IsDigit(item) && item!='.')
+                if (!Char.IsDigit(item) && item != '.')
                 {
                     return false;
                 }
@@ -94,13 +94,18 @@ namespace Presentacion
         }
         bool ValidarVacios()
         {
-            if(txtCantidad.Text=="" || txtDescripcion.Text=="" || txtNombre.Text=="" || txtPrecio.Text=="" || txtCantidad.Text == "")
+            if (txtCantidad.Text == "" || txtDescripcion.Text == "" || txtNombre.Text == "" || txtPrecio.Text == "" || txtCantidad.Text == "")
             {
                 return false;
             }
             return true;
         }
         private void Articulos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_Id_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -50,6 +50,7 @@
             Txt_Id.Name = "Txt_Id";
             Txt_Id.Size = new System.Drawing.Size(149, 23);
             Txt_Id.TabIndex = 0;
+            Txt_Id.TextChanged += Txt_Id_TextChanged;
             // 
             // label1
             // 

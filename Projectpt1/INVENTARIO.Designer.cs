@@ -28,59 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            button1 = new System.Windows.Forms.Button();
+            btnEliminar = new System.Windows.Forms.Button();
             btnActualizar = new System.Windows.Forms.Button();
             dataGridArtículos = new System.Windows.Forms.DataGridView();
-            dataGridReservas = new System.Windows.Forms.DataGridView();
+            ComId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ComNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ComDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ComPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ComExistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridReservas).BeginInit();
             SuspendLayout();
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(208, 52);
+            label2.Location = new System.Drawing.Point(259, 50);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(555, 39);
+            label2.Size = new System.Drawing.Size(314, 32);
             label2.TabIndex = 3;
-            label2.Text = "Inventario de Artículos y Reservas";
+            label2.Text = "Inventario de Artículos ";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(196, 177);
+            label1.Location = new System.Drawing.Point(344, 120);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(199, 27);
+            label1.Size = new System.Drawing.Size(164, 23);
             label1.TabIndex = 6;
             label1.Text = "Lista de Artículos";
             // 
-            // label3
+            // btnEliminar
             // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label3.Location = new System.Drawing.Point(611, 177);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(200, 27);
-            label3.TabIndex = 7;
-            label3.Text = "Lista de Reservas";
-            // 
-            // button1
-            // 
-            button1.BackColor = System.Drawing.Color.Red;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button1.Location = new System.Drawing.Point(512, 648);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(113, 63);
-            button1.TabIndex = 8;
-            button1.Text = "Eliminar";
-            button1.UseVisualStyleBackColor = false;
+            btnEliminar.BackColor = System.Drawing.Color.Red;
+            btnEliminar.FlatAppearance.BorderSize = 0;
+            btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnEliminar.Location = new System.Drawing.Point(448, 486);
+            btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new System.Drawing.Size(99, 47);
+            btnEliminar.TabIndex = 8;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnActualizar
             // 
@@ -88,9 +83,10 @@
             btnActualizar.FlatAppearance.BorderSize = 0;
             btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnActualizar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnActualizar.Location = new System.Drawing.Point(375, 648);
+            btnActualizar.Location = new System.Drawing.Point(328, 486);
+            btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new System.Drawing.Size(113, 63);
+            btnActualizar.Size = new System.Drawing.Size(99, 47);
             btnActualizar.TabIndex = 9;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = false;
@@ -98,40 +94,66 @@
             // 
             // dataGridArtículos
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridArtículos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridArtículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridArtículos.Location = new System.Drawing.Point(151, 217);
+            dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComNombre, ComDescripcion, ComPrecio, ComExistencias });
+            dataGridArtículos.EnableHeadersVisualStyles = false;
+            dataGridArtículos.Location = new System.Drawing.Point(139, 158);
+            dataGridArtículos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             dataGridArtículos.Name = "dataGridArtículos";
             dataGridArtículos.RowHeadersWidth = 51;
-            dataGridArtículos.Size = new System.Drawing.Size(300, 400);
+            dataGridArtículos.Size = new System.Drawing.Size(553, 300);
             dataGridArtículos.TabIndex = 10;
+            dataGridArtículos.CellContentClick += dataGridArtículos_CellContentClick;
             // 
-            // dataGridReservas
+            // ComId
             // 
-            dataGridReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridReservas.Location = new System.Drawing.Point(563, 217);
-            dataGridReservas.Name = "dataGridReservas";
-            dataGridReservas.RowHeadersWidth = 51;
-            dataGridReservas.Size = new System.Drawing.Size(300, 400);
-            dataGridReservas.TabIndex = 11;
+            ComId.HeaderText = "Id";
+            ComId.Name = "ComId";
+            // 
+            // ComNombre
+            // 
+            ComNombre.HeaderText = "Nombre";
+            ComNombre.Name = "ComNombre";
+            // 
+            // ComDescripcion
+            // 
+            ComDescripcion.HeaderText = "Descripcion";
+            ComDescripcion.Name = "ComDescripcion";
+            // 
+            // ComPrecio
+            // 
+            ComPrecio.HeaderText = "Precio";
+            ComPrecio.Name = "ComPrecio";
+            // 
+            // ComExistencias
+            // 
+            ComExistencias.HeaderText = "Existencias";
+            ComExistencias.Name = "ComExistencias";
             // 
             // Inventario
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.Silver;
-            ClientSize = new System.Drawing.Size(1011, 740);
-            Controls.Add(dataGridReservas);
+            ClientSize = new System.Drawing.Size(885, 555);
             Controls.Add(dataGridArtículos);
             Controls.Add(btnActualizar);
-            Controls.Add(button1);
-            Controls.Add(label3);
+            Controls.Add(btnEliminar);
             Controls.Add(label1);
             Controls.Add(label2);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "Inventario";
             Text = "INVENTARIO";
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridReservas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,10 +162,13 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridView dataGridArtículos;
-        private System.Windows.Forms.DataGridView dataGridReservas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComExistencias;
     }
 }
