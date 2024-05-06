@@ -15,3 +15,6 @@ Finalmente, este software de gestión de alquiler de mobiliario para eventos
 puede proporcionar una serie de beneficios que ayudan a mejorar la eficiencia
 operativa, optimizar la experiencia del cliente y aumentar la rentabilidad del
 negocio.
+
+ UML:
+ ![image](https://github.com/FabianPB/Proyecto-de-aula/assets/168008586/9cf8fe34-b0b1-4dd4-9ab6-e2f44f2a40f0)
