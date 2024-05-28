@@ -29,160 +29,172 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LOGIN));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            panel1 = new System.Windows.Forms.Panel();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            txtUsuario = new System.Windows.Forms.TextBox();
+            txtContraseña = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            btnLogin = new System.Windows.Forms.Button();
+            btnCerrar = new System.Windows.Forms.PictureBox();
+            btnMinimizar = new System.Windows.Forms.PictureBox();
+            pictureBox2 = new System.Windows.Forms.PictureBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(68)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 501);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            panel1.BackColor = System.Drawing.Color.Black;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(435, 659);
+            panel1.TabIndex = 0;
+            panel1.MouseDown += panel1_MouseDown;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 87);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(377, 313);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(46, 114);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(340, 379);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.Black;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsuario.Location = new System.Drawing.Point(529, 273);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(344, 23);
-            this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.Text = "USUARIO";
-            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
+            txtUsuario.BackColor = System.Drawing.Color.White;
+            txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtUsuario.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            txtUsuario.ForeColor = System.Drawing.Color.DimGray;
+            txtUsuario.Location = new System.Drawing.Point(636, 348);
+            txtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new System.Drawing.Size(344, 23);
+            txtUsuario.TabIndex = 1;
+            txtUsuario.Text = "USUARIO";
+            txtUsuario.Enter += txtUsuario_Enter;
+            txtUsuario.Leave += txtUsuario_Leave;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.BackColor = System.Drawing.Color.Black;
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.txtContraseña.Location = new System.Drawing.Point(529, 317);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(344, 23);
-            this.txtContraseña.TabIndex = 2;
-            this.txtContraseña.Text = "CONTRASEÑA";
-            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
-            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
+            txtContraseña.BackColor = System.Drawing.Color.White;
+            txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtContraseña.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            txtContraseña.ForeColor = System.Drawing.Color.DimGray;
+            txtContraseña.Location = new System.Drawing.Point(636, 395);
+            txtContraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new System.Drawing.Size(344, 23);
+            txtContraseña.TabIndex = 2;
+            txtContraseña.Text = "CONTRASEÑA";
+            txtContraseña.Enter += txtContraseña_Enter;
+            txtContraseña.Leave += txtContraseña_Leave;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(646, 206);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 34);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "LOGIN";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Location = new System.Drawing.Point(646, 258);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(103, 34);
+            label1.TabIndex = 3;
+            label1.Text = "LOGIN";
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Gray;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(529, 382);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(344, 51);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "ENTRAR";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            btnLogin.BackColor = System.Drawing.Color.Black;
+            btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = System.Drawing.Color.White;
+            btnLogin.Location = new System.Drawing.Point(636, 485);
+            btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new System.Drawing.Size(344, 64);
+            btnLogin.TabIndex = 0;
+            btnLogin.Text = "ENTRAR";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(946, 13);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(28, 24);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 5;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            btnCerrar.BackColor = System.Drawing.Color.White;
+            btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnCerrar.Image = (System.Drawing.Image)resources.GetObject("btnCerrar.Image");
+            btnCerrar.Location = new System.Drawing.Point(1139, 15);
+            btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new System.Drawing.Size(28, 30);
+            btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            btnCerrar.TabIndex = 5;
+            btnCerrar.TabStop = false;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(912, 12);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(28, 24);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 6;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            btnMinimizar.BackColor = System.Drawing.Color.White;
+            btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnMinimizar.Image = (System.Drawing.Image)resources.GetObject("btnMinimizar.Image");
+            btnMinimizar.Location = new System.Drawing.Point(1105, 15);
+            btnMinimizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnMinimizar.Name = "btnMinimizar";
+            btnMinimizar.Size = new System.Drawing.Size(28, 30);
+            btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            btnMinimizar.TabIndex = 6;
+            btnMinimizar.TabStop = false;
+            btnMinimizar.Click += btnMinimizar_Click;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(545, 50);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(306, 153);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = (System.Drawing.Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new System.Drawing.Point(688, 26);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new System.Drawing.Size(243, 280);
+            pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
             // 
             // LOGIN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(986, 501);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.btnMinimizar);
-            this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LOGIN";
-            this.Text = "Form1";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LOGIN_MouseDown);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AcceptButton = btnLogin;
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(1179, 659);
+            Controls.Add(pictureBox2);
+            Controls.Add(btnMinimizar);
+            Controls.Add(btnCerrar);
+            Controls.Add(btnLogin);
+            Controls.Add(label1);
+            Controls.Add(txtContraseña);
+            Controls.Add(txtUsuario);
+            Controls.Add(panel1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "LOGIN";
+            Text = "Form1";
+            MouseDown += LOGIN_MouseDown;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -192,9 +204,9 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

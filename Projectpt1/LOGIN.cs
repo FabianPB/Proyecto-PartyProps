@@ -16,6 +16,8 @@ namespace Presentacion
         public LOGIN()
         {
             InitializeComponent();
+            txtUsuario.KeyPress += new KeyPressEventHandler(CheckEnterKeyPress);
+            txtContraseña.KeyPress += new KeyPressEventHandler(CheckEnterKeyPress);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -28,7 +30,7 @@ namespace Presentacion
             if (txtUsuario.Text == "USUARIO")
             {
                 txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.LightGray;
+                txtUsuario.ForeColor = Color.Black;
             }
         }
 
@@ -46,7 +48,7 @@ namespace Presentacion
             if (txtContraseña.Text == "CONTRASEÑA")
             {
                 txtContraseña.Text = "";
-                txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.ForeColor = Color.Black;
                 txtContraseña.UseSystemPasswordChar = true;
             }
         }
@@ -83,6 +85,14 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void CheckEnterKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                btnLogin.PerformClick();
+            }
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "ADMIN" && txtContraseña.Text == "ADMIN")
@@ -98,6 +108,6 @@ namespace Presentacion
             }
         }
 
-       
+        
     }
 }

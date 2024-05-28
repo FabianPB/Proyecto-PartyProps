@@ -108,7 +108,7 @@ namespace Presentacion
 
         private void dataGridArtículos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string nombreColumna = Columns;
+            
         }
     }
 }

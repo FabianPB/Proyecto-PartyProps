@@ -46,9 +46,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(259, 50);
+            label2.Location = new System.Drawing.Point(296, 67);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(314, 32);
+            label2.Size = new System.Drawing.Size(385, 39);
             label2.TabIndex = 3;
             label2.Text = "Inventario de Artículos ";
             // 
@@ -56,9 +56,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(344, 120);
+            label1.Location = new System.Drawing.Point(393, 160);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(164, 23);
+            label1.Size = new System.Drawing.Size(199, 27);
             label1.TabIndex = 6;
             label1.Text = "Lista de Artículos";
             // 
@@ -68,10 +68,9 @@
             btnEliminar.FlatAppearance.BorderSize = 0;
             btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnEliminar.Location = new System.Drawing.Point(448, 486);
-            btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btnEliminar.Location = new System.Drawing.Point(512, 648);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new System.Drawing.Size(99, 47);
+            btnEliminar.Size = new System.Drawing.Size(113, 63);
             btnEliminar.TabIndex = 8;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
@@ -83,10 +82,9 @@
             btnActualizar.FlatAppearance.BorderSize = 0;
             btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnActualizar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnActualizar.Location = new System.Drawing.Point(328, 486);
-            btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btnActualizar.Location = new System.Drawing.Point(375, 648);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new System.Drawing.Size(99, 47);
+            btnActualizar.Size = new System.Drawing.Size(113, 63);
             btnActualizar.TabIndex = 9;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = false;
@@ -105,52 +103,60 @@
             dataGridArtículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComNombre, ComDescripcion, ComPrecio, ComExistencias });
             dataGridArtículos.EnableHeadersVisualStyles = false;
-            dataGridArtículos.Location = new System.Drawing.Point(139, 158);
-            dataGridArtículos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dataGridArtículos.Location = new System.Drawing.Point(159, 211);
             dataGridArtículos.Name = "dataGridArtículos";
             dataGridArtículos.RowHeadersWidth = 51;
-            dataGridArtículos.Size = new System.Drawing.Size(553, 300);
+            dataGridArtículos.Size = new System.Drawing.Size(632, 400);
             dataGridArtículos.TabIndex = 10;
             dataGridArtículos.CellContentClick += dataGridArtículos_CellContentClick;
             // 
             // ComId
             // 
             ComId.HeaderText = "Id";
+            ComId.MinimumWidth = 6;
             ComId.Name = "ComId";
+            ComId.Width = 125;
             // 
             // ComNombre
             // 
             ComNombre.HeaderText = "Nombre";
+            ComNombre.MinimumWidth = 6;
             ComNombre.Name = "ComNombre";
+            ComNombre.Width = 125;
             // 
             // ComDescripcion
             // 
             ComDescripcion.HeaderText = "Descripcion";
+            ComDescripcion.MinimumWidth = 6;
             ComDescripcion.Name = "ComDescripcion";
+            ComDescripcion.Width = 125;
             // 
             // ComPrecio
             // 
             ComPrecio.HeaderText = "Precio";
+            ComPrecio.MinimumWidth = 6;
             ComPrecio.Name = "ComPrecio";
+            ComPrecio.Width = 125;
             // 
             // ComExistencias
             // 
             ComExistencias.HeaderText = "Existencias";
+            ComExistencias.MinimumWidth = 6;
             ComExistencias.Name = "ComExistencias";
+            ComExistencias.Width = 125;
             // 
             // Inventario
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.Silver;
-            ClientSize = new System.Drawing.Size(885, 555);
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(1011, 740);
             Controls.Add(dataGridArtículos);
             Controls.Add(btnActualizar);
             Controls.Add(btnEliminar);
             Controls.Add(label1);
             Controls.Add(label2);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "Inventario";
             Text = "INVENTARIO";
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).EndInit();
