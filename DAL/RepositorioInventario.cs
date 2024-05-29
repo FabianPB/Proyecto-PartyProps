@@ -2,7 +2,7 @@
 using Entity;
 namespace DAL
 {
-    public class RepositorioInventario
+    public class RepositorioInventario : IRepositorioInventario
     {
         private readonly string FileInventario = "./Inventario.csv";
 

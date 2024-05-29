@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
 
 namespace Presentacion
 {
@@ -19,7 +21,7 @@ namespace Presentacion
         {
 
             InitializeComponent();
-            CargarDatosTabla();
+            CargarTablas();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -109,6 +111,20 @@ namespace Presentacion
         private void dataGridArtículos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void CargarTablas()
+        {
+
+            var articulos = logicaInventario.ListaArticulo();
+            dataGridArtículos.Rows.Clear();
+            foreach (var articulo in articulos)
+            {
+                dataGridArtículos.Rows.Add(articulo.idArticulo,articulo.nombreArticulo,articulo.descripcion,articulo.precioAlquiler,articulo.existencias);
+            } 
+
+
+
         }
     }
 }

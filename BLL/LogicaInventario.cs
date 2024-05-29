@@ -8,13 +8,17 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class LogicaInventario
+    public class LogicaInventario : ILogicaIventario
     {
         RepositorioInventario datos = new RepositorioInventario();
         
+
+
         public void Registrar(Articulo articulo)
         {
+
             datos.Registrar(articulo);
+             
         }
         public Articulo Buscar(string idArticulo)
         {
@@ -24,8 +28,9 @@ namespace BLL
         {
             datos.EliminarArticulo(articulo);
         }
-        public List<Articulo> ListaArticulo ()
+        public List<Articulo> ListaArticulo()
         {
+            var articulos = datos.EncontrarArticulos();
             return datos.EncontrarArticulos();
         }
     }
