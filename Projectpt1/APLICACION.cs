@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projectpt1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
 namespace Presentacion
 {
@@ -27,6 +27,7 @@ namespace Presentacion
 
         private void AbrirFormHija(object formhija)
         {
+            panelContenedor.Controls.Clear();
             if (this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
             Form fh = formhija as Form;
@@ -81,5 +82,18 @@ namespace Presentacion
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Inicio());
+        }
+
+        private void BarraSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+      
     }
 }

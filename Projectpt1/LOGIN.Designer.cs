@@ -37,12 +37,12 @@
             btnLogin = new System.Windows.Forms.Button();
             btnCerrar = new System.Windows.Forms.PictureBox();
             btnMinimizar = new System.Windows.Forms.PictureBox();
-            pictureBox2 = new System.Windows.Forms.PictureBox();
+            logo = new System.Windows.Forms.PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -158,15 +158,16 @@
             btnMinimizar.TabStop = false;
             btnMinimizar.Click += btnMinimizar_Click;
             // 
-            // pictureBox2
+            // logo
             // 
-            pictureBox2.Image = (System.Drawing.Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new System.Drawing.Point(688, 26);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(243, 280);
-            pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            pictureBox2.TabIndex = 7;
-            pictureBox2.TabStop = false;
+            logo.Image = (System.Drawing.Image)resources.GetObject("logo.Image");
+            logo.Location = new System.Drawing.Point(686, 61);
+            logo.Name = "logo";
+            logo.Size = new System.Drawing.Size(243, 280);
+            logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            logo.TabIndex = 7;
+            logo.TabStop = false;
+            logo.MouseDown += logo_MouseDown;
             // 
             // LOGIN
             // 
@@ -175,7 +176,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1179, 659);
-            Controls.Add(pictureBox2);
+            Controls.Add(logo);
             Controls.Add(btnMinimizar);
             Controls.Add(btnCerrar);
             Controls.Add(btnLogin);
@@ -192,7 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -207,7 +208,7 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox logo;
     }
 }
 
