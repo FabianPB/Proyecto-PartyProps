@@ -44,19 +44,19 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnArticulo_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new Articulos());
         }
 
-        private void btnReservas_Click(object sender, EventArgs e)
+        private void btnAgendar_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new Reservas());
+            AbrirFormHija(new AGENDAR());
         }
 
-        private void btnInventario_Click(object sender, EventArgs e)
+        private void btnReservar_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new Inventario());
+            AbrirFormHija(new RESERVAR());
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -94,6 +94,9 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-      
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new SERVICIOS());
+        }
     }
 }

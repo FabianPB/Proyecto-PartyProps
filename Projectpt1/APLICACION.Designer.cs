@@ -30,15 +30,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APLICACION));
             label1 = new System.Windows.Forms.Label();
             MenuVertical = new System.Windows.Forms.Panel();
+            panel8 = new System.Windows.Forms.Panel();
+            btnServicios = new System.Windows.Forms.Button();
             btnInicio = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             panel3 = new System.Windows.Forms.Panel();
-            btnInventario = new System.Windows.Forms.Button();
+            btnReservar = new System.Windows.Forms.Button();
             panel2 = new System.Windows.Forms.Panel();
-            btnReservas = new System.Windows.Forms.Button();
+            btnAgendar = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
-            btnArticulo = new System.Windows.Forms.Button();
+            btnRegistrar = new System.Windows.Forms.Button();
             panelContenedor = new System.Windows.Forms.Panel();
+            panel9 = new System.Windows.Forms.Panel();
             label20 = new System.Windows.Forms.Label();
             panel7 = new System.Windows.Forms.Panel();
             label14 = new System.Windows.Forms.Label();
@@ -49,6 +52,7 @@
             pictureBox8 = new System.Windows.Forms.PictureBox();
             label19 = new System.Windows.Forms.Label();
             panel6 = new System.Windows.Forms.Panel();
+            label21 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
@@ -74,11 +78,11 @@
             pictureBox4 = new System.Windows.Forms.PictureBox();
             pictureBox5 = new System.Windows.Forms.PictureBox();
             pictureBox6 = new System.Windows.Forms.PictureBox();
-            label21 = new System.Windows.Forms.Label();
             MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnInicio).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelContenedor.SuspendLayout();
+            panel9.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel6.SuspendLayout();
@@ -111,21 +115,53 @@
             // MenuVertical
             // 
             MenuVertical.BackColor = System.Drawing.Color.Black;
+            MenuVertical.Controls.Add(panel8);
+            MenuVertical.Controls.Add(btnServicios);
             MenuVertical.Controls.Add(btnInicio);
             MenuVertical.Controls.Add(pictureBox1);
             MenuVertical.Controls.Add(panel3);
-            MenuVertical.Controls.Add(btnInventario);
+            MenuVertical.Controls.Add(btnReservar);
             MenuVertical.Controls.Add(panel2);
             MenuVertical.Controls.Add(label1);
-            MenuVertical.Controls.Add(btnReservas);
+            MenuVertical.Controls.Add(btnAgendar);
             MenuVertical.Controls.Add(panel1);
-            MenuVertical.Controls.Add(btnArticulo);
+            MenuVertical.Controls.Add(btnRegistrar);
             MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             MenuVertical.Location = new System.Drawing.Point(0, 0);
             MenuVertical.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             MenuVertical.Name = "MenuVertical";
             MenuVertical.Size = new System.Drawing.Size(287, 878);
             MenuVertical.TabIndex = 1;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = System.Drawing.Color.Crimson;
+            panel8.Location = new System.Drawing.Point(1, 452);
+            panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            panel8.Name = "panel8";
+            panel8.Size = new System.Drawing.Size(23, 58);
+            panel8.TabIndex = 10;
+            // 
+            // btnServicios
+            // 
+            btnServicios.BackColor = System.Drawing.Color.Black;
+            btnServicios.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnServicios.FlatAppearance.BorderSize = 0;
+            btnServicios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnServicios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnServicios.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            btnServicios.ForeColor = System.Drawing.Color.White;
+            btnServicios.Image = (System.Drawing.Image)resources.GetObject("btnServicios.Image");
+            btnServicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnServicios.Location = new System.Drawing.Point(30, 452);
+            btnServicios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnServicios.Name = "btnServicios";
+            btnServicios.Size = new System.Drawing.Size(253, 58);
+            btnServicios.TabIndex = 9;
+            btnServicios.Text = "SERVICIOS";
+            btnServicios.UseVisualStyleBackColor = false;
+            btnServicios.Click += btnServicios_Click;
             // 
             // btnInicio
             // 
@@ -153,62 +189,62 @@
             // panel3
             // 
             panel3.BackColor = System.Drawing.Color.Crimson;
-            panel3.Location = new System.Drawing.Point(1, 346);
+            panel3.Location = new System.Drawing.Point(1, 294);
             panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
             panel3.Size = new System.Drawing.Size(23, 58);
             panel3.TabIndex = 6;
             // 
-            // btnInventario
+            // btnReservar
             // 
-            btnInventario.BackColor = System.Drawing.Color.Black;
-            btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnInventario.FlatAppearance.BorderSize = 0;
-            btnInventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnInventario.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            btnInventario.ForeColor = System.Drawing.Color.White;
-            btnInventario.Image = (System.Drawing.Image)resources.GetObject("btnInventario.Image");
-            btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnInventario.Location = new System.Drawing.Point(30, 346);
-            btnInventario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            btnInventario.Name = "btnInventario";
-            btnInventario.Size = new System.Drawing.Size(253, 58);
-            btnInventario.TabIndex = 5;
-            btnInventario.Text = "INVENTARIO";
-            btnInventario.UseVisualStyleBackColor = false;
-            btnInventario.Click += btnInventario_Click;
+            btnReservar.BackColor = System.Drawing.Color.Black;
+            btnReservar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnReservar.FlatAppearance.BorderSize = 0;
+            btnReservar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnReservar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnReservar.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            btnReservar.ForeColor = System.Drawing.Color.White;
+            btnReservar.Image = (System.Drawing.Image)resources.GetObject("btnReservar.Image");
+            btnReservar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnReservar.Location = new System.Drawing.Point(30, 294);
+            btnReservar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnReservar.Name = "btnReservar";
+            btnReservar.Size = new System.Drawing.Size(253, 58);
+            btnReservar.TabIndex = 5;
+            btnReservar.Text = "RESERVAR";
+            btnReservar.UseVisualStyleBackColor = false;
+            btnReservar.Click += btnReservar_Click;
             // 
             // panel2
             // 
             panel2.BackColor = System.Drawing.Color.Crimson;
-            panel2.Location = new System.Drawing.Point(1, 281);
+            panel2.Location = new System.Drawing.Point(1, 373);
             panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(23, 58);
             panel2.TabIndex = 4;
             // 
-            // btnReservas
+            // btnAgendar
             // 
-            btnReservas.BackColor = System.Drawing.Color.Black;
-            btnReservas.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnReservas.FlatAppearance.BorderSize = 0;
-            btnReservas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            btnReservas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            btnReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnReservas.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            btnReservas.ForeColor = System.Drawing.Color.White;
-            btnReservas.Image = (System.Drawing.Image)resources.GetObject("btnReservas.Image");
-            btnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnReservas.Location = new System.Drawing.Point(30, 281);
-            btnReservas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            btnReservas.Name = "btnReservas";
-            btnReservas.Size = new System.Drawing.Size(253, 58);
-            btnReservas.TabIndex = 3;
-            btnReservas.Text = "RESERVAS";
-            btnReservas.UseVisualStyleBackColor = false;
-            btnReservas.Click += btnReservas_Click;
+            btnAgendar.BackColor = System.Drawing.Color.Black;
+            btnAgendar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnAgendar.FlatAppearance.BorderSize = 0;
+            btnAgendar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnAgendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnAgendar.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            btnAgendar.ForeColor = System.Drawing.Color.White;
+            btnAgendar.Image = (System.Drawing.Image)resources.GetObject("btnAgendar.Image");
+            btnAgendar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnAgendar.Location = new System.Drawing.Point(30, 373);
+            btnAgendar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnAgendar.Name = "btnAgendar";
+            btnAgendar.Size = new System.Drawing.Size(253, 58);
+            btnAgendar.TabIndex = 3;
+            btnAgendar.Text = "AGENDAR";
+            btnAgendar.UseVisualStyleBackColor = false;
+            btnAgendar.Click += btnAgendar_Click;
             // 
             // panel1
             // 
@@ -219,32 +255,32 @@
             panel1.Size = new System.Drawing.Size(23, 58);
             panel1.TabIndex = 2;
             // 
-            // btnArticulo
+            // btnRegistrar
             // 
-            btnArticulo.BackColor = System.Drawing.Color.Black;
-            btnArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnArticulo.FlatAppearance.BorderSize = 0;
-            btnArticulo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            btnArticulo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            btnArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnArticulo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            btnArticulo.ForeColor = System.Drawing.Color.White;
-            btnArticulo.Image = (System.Drawing.Image)resources.GetObject("btnArticulo.Image");
-            btnArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnArticulo.Location = new System.Drawing.Point(30, 216);
-            btnArticulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            btnArticulo.Name = "btnArticulo";
-            btnArticulo.Size = new System.Drawing.Size(257, 58);
-            btnArticulo.TabIndex = 1;
-            btnArticulo.Text = "ARTICULOS";
-            btnArticulo.UseVisualStyleBackColor = false;
-            btnArticulo.Click += btnArticulo_Click;
+            btnRegistrar.BackColor = System.Drawing.Color.Black;
+            btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnRegistrar.FlatAppearance.BorderSize = 0;
+            btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnRegistrar.ForeColor = System.Drawing.Color.White;
+            btnRegistrar.Image = (System.Drawing.Image)resources.GetObject("btnRegistrar.Image");
+            btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnRegistrar.Location = new System.Drawing.Point(30, 216);
+            btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new System.Drawing.Size(257, 58);
+            btnRegistrar.TabIndex = 1;
+            btnRegistrar.Text = "REGISTRAR";
+            btnRegistrar.UseVisualStyleBackColor = false;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // panelContenedor
             // 
             panelContenedor.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             panelContenedor.BackColor = System.Drawing.Color.White;
-            panelContenedor.Controls.Add(label20);
+            panelContenedor.Controls.Add(panel9);
             panelContenedor.Controls.Add(panel7);
             panelContenedor.Controls.Add(panel6);
             panelContenedor.Controls.Add(panel4);
@@ -256,13 +292,22 @@
             panelContenedor.TabIndex = 2;
             panelContenedor.MouseDown += panelContenedor_MouseDown;
             // 
+            // panel9
+            // 
+            panel9.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
+            panel9.Controls.Add(label20);
+            panel9.Location = new System.Drawing.Point(74, 30);
+            panel9.Name = "panel9";
+            panel9.Size = new System.Drawing.Size(903, 63);
+            panel9.TabIndex = 14;
+            // 
             // label20
             // 
             label20.AutoSize = true;
-            label20.BackColor = System.Drawing.Color.White;
+            label20.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
             label20.Font = new System.Drawing.Font("Showcard Gothic", 25.8000011F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label20.ForeColor = System.Drawing.Color.Black;
-            label20.Location = new System.Drawing.Point(398, 46);
+            label20.Location = new System.Drawing.Point(307, 9);
             label20.Name = "label20";
             label20.Size = new System.Drawing.Size(310, 54);
             label20.TabIndex = 5;
@@ -372,6 +417,16 @@
             panel6.Name = "panel6";
             panel6.Size = new System.Drawing.Size(265, 459);
             panel6.TabIndex = 3;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label21.Location = new System.Drawing.Point(7, 385);
+            label21.Name = "label21";
+            label21.Size = new System.Drawing.Size(215, 20);
+            label21.TabIndex = 7;
+            label21.Text = "configuración en tu evento.";
             // 
             // label8
             // 
@@ -667,16 +722,6 @@
             pictureBox6.TabIndex = 2;
             pictureBox6.TabStop = false;
             // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label21.Location = new System.Drawing.Point(7, 385);
-            label21.Name = "label21";
-            label21.Size = new System.Drawing.Size(215, 20);
-            label21.TabIndex = 7;
-            label21.Text = "configuración en tu evento.";
-            // 
             // APLICACION
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -694,7 +739,8 @@
             ((System.ComponentModel.ISupportInitialize)btnInicio).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelContenedor.ResumeLayout(false);
-            panelContenedor.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -720,11 +766,11 @@
         #endregion
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnArticulo;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnInventario;
+        private System.Windows.Forms.Button btnReservar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnReservas;
+        private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -765,5 +811,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnServicios;
+        private System.Windows.Forms.Panel panel9;
     }
 }

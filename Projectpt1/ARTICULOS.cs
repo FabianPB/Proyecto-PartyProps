@@ -100,16 +100,6 @@ namespace Presentacion
             }
             return true;
         }
-        private void Articulos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Txt_Id_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
+     
     }
 }

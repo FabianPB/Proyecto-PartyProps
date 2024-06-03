@@ -118,6 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnServicios.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAAbBJREFUWEftlL2OgkAUhbXnIWxMSGxICJ3PQyuUWlnTWRkTfRB6ShMqGxpC7Tt4
+        d88g2Stelj9nZQ0n+ZLhnntnTiZkJt+igSMWh4RYbM18Pqf1eq3AWurpiFhsxGw2o9VqRVEU0e12I67L
+        5ULb7ZZM0xRnWyAWK8HtbDYbiuP4HoUoTVMKgoAcx1FgjVoh9GKm482KxQekm8qyjHa7HS2XS5pOp+Lc
+        YrFQt5gkiZqBOtysWOwcqooeYX8+eKhCfUJV0TJsvvB9/976+E+xRi1I/6znebwnXxwOB2X+RagqcDaE
+        LKyeL4qAzHgL0OcENAyDbNvWCs7gZ0KNA4ZhqGo6hTP4mVDjgOfzWT0zrutqAXvjDH4m1CpgeYNXIu0P
+        jQGbMgbsi/aAp9NJzfym4/EozgLtAeFdr1c1KwGvbr7sQ5hltXyBIsQMcQOODh8aAxZ08aExYEEXH/rc
+        gE3evTrxd/HlAbGue/favIvl/QGEXlbLFyhCzHjaQNqQ09aX+qExoOSBsi/1Q2NAyQNlX+qH/mfA/X6v
+        zCEIWZ4CWpalDKR/J8iALE8BB4xYHAgT+gLkUO47IOoYrwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnInicio.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -166,7 +179,7 @@
         +dWLqOncDI88lYoZoaaTSzyv/UHE9EpFRYhr4+Y/9ezYxOT/xWJ5B+NWJ5JJXLdIAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnInventario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnReservar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAyhJREFUWEftmD9IOmEYx/tDFGaG0ZCQUVlLIRhiQosR0Z81aGiJIAhSCMKoEKSI
@@ -186,7 +199,7 @@
         YII=
 </value>
   </data>
-  <data name="btnReservas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAgendar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAf5JREFUWEftl8GOwVAUhm14H7wGsWFnyxuI2HsHsbbmIdhaW7PGkp3cme9mTnvm
@@ -201,7 +214,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="btnArticulo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnRegistrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAs5JREFUWEfNlr9LclEYx4OihgaD9A9oS1uy1sqCNh3cxKnJpIZAFNpqkP6CthwS
