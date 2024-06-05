@@ -21,5 +21,15 @@ namespace Presentacion
         {
 
         }
+
+        private void dataGridArtículos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

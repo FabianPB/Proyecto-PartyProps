@@ -110,7 +110,7 @@ namespace Presentacion
 
         private void dataGridArtículos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void CargarTablas()
@@ -120,10 +120,15 @@ namespace Presentacion
             dataGridArtículos.Rows.Clear();
             foreach (var articulo in articulos)
             {
-                dataGridArtículos.Rows.Add(articulo.idArticulo,articulo.nombreArticulo,articulo.descripcion,articulo.precioAlquiler,articulo.existencias);
-            } 
+                dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.nombreArticulo, articulo.descripcion, articulo.precioAlquiler, articulo.existencias);
+            }
 
 
+
+        }
+
+        private void RESERVAR_Load(object sender, EventArgs e)
+        {
 
         }
     }
