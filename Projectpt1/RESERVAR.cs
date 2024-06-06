@@ -11,17 +11,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
+using Entity;
 
 namespace Presentacion
 {
     public partial class RESERVAR : Form
     {
         LogicaInventario logicaInventario = new LogicaInventario();
+        
         public RESERVAR()
         {
-
+            //CargarTablas();
             InitializeComponent();
-            CargarTablas();
+            
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -115,15 +117,12 @@ namespace Presentacion
 
         private void CargarTablas()
         {
-
-            var articulos = logicaInventario.ListaArticulo();
-            dataGridArtículos.Rows.Clear();
+            List<Articulo> articulos = logicaInventario.ListaArticulo();
+            //dataGridArtículos.Rows.Clear();
             foreach (var articulo in articulos)
             {
-                dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.nombreArticulo, articulo.descripcion, articulo.precioAlquiler, articulo.existencias);
+                dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.descripcion,articulo.categoria,articulo.precioAlquiler, articulo.existencias);
             }
-
-
 
         }
 

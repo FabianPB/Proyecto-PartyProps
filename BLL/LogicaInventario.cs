@@ -18,7 +18,7 @@ namespace BLL
         {
 
             repositorioInventario.Registrar(articulo);
-             
+            
         }
         public Articulo Buscar(string idArticulo)
         {
@@ -30,8 +30,8 @@ namespace BLL
         }
         public List<Articulo> ListaArticulo()
         {
-            var articulos = repositorioInventario.EncontrarArticulos();
-            return repositorioInventario.EncontrarArticulos();
+            List<Articulo> articulos = repositorioInventario.EncontrarArticulos();
+            return articulos;
         }
     }
 }

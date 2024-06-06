@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class Alquiler
+    internal class Cliente
     {
-        public DateTime fechaFacturacion {  get; set; } 
-        public DateTime fechaDevoluciion { get; set;}
-
-        
     }
 }

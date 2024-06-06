@@ -1,21 +1,46 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+
+using Microsoft.Data.SqlClient;
+
+using System.Data.SqlClient;
 
 namespace DAL
 {
    public class servicioSQL
     {
-        public static SqlConnection ObtenerConexion()
+        private string cadenaConexion = "Server=.\\SQLEXPRESS;Database=DB_INVENTARIOALQUILER;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True;";
+
+        protected SqlConnection conexion;
+
+        public servicioSQL()
         {
-            SqlConnection conexion = new SqlConnection("Server=localhost;Database=delivery_express_db;User ID=sa;Password=Sup3r5tr0ngP4ss;");
-            conexion.Open();
+            conexion = new SqlConnection(cadenaConexion);
+        }
 
+
+        public bool AbrirConexion()
+        {
+            if (conexion.State != ConnectionState.Open)
+            {
+                conexion.Open();
+                return true;
+            }
+            return false;
+        }
+
+        public void CerrarConexion()
+        {
+            conexion.Close();
+        }
+
+        public SqlConnection ObtenerConexion()
+        {
             return conexion;
-
         }
     }
 }

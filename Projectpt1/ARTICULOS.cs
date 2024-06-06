@@ -39,16 +39,10 @@ namespace Presentacion
                 MessageBox.Show("Error campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             Articulo articulo = new Articulo();
-            if (ValidarLetras(txtNombre.Text))
-            {
-                articulo.nombreArticulo = txtNombre.Text;
-            }
-            else
-            {
-                MessageBox.Show("El nombre solo permite letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+
+
             if (cbCategoria.SelectedItem != null)
             {
                 articulo.categoria = cbCategoria.Text;
@@ -88,9 +82,9 @@ namespace Presentacion
                 return;
             }
             logica.Registrar(articulo);
-            CargarDatosTabla();
-            MessageBox.Show("Artículo registrado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            MessageBox.Show("Artículo registrado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CargarDatosTabla();
         }
         private void CargarDatosTabla()
         {
@@ -114,14 +108,12 @@ namespace Presentacion
             //    }
             //}
 
-
-
-            var articulos = logica.ListaArticulo();
+            List<Articulo> articulos = logica.ListaArticulo();
             dataGridArtículos.Rows.Clear();
 
             foreach (var articulo in articulos)
             {
-              dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.nombreArticulo, articulo.categoria, articulo.descripcion, articulo.precioAlquiler, articulo.existencias);
+                dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.categoria, articulo.descripcion, articulo.precioAlquiler, articulo.existencias);
             }
 
 
@@ -150,7 +142,7 @@ namespace Presentacion
         }
         bool ValidarVacios()
         {
-            if (txtCantidad.Text == "" || txtDescripcion.Text == "" || txtNombre.Text == "" || txtPrecio.Text == "" || txtCantidad.Text == "")
+            if (txtCantidad.Text == "" || txtDescripcion.Text == "" || txtPrecio.Text == "" || txtCantidad.Text == "")
             {
                 return false;
             }
@@ -170,7 +162,7 @@ namespace Presentacion
                 if (buscado != null)
                 {
                     dataGridArtículos.Rows.Clear();
-                    dataGridArtículos.Rows.Add(buscado.idArticulo, buscado.nombreArticulo, buscado.categoria, buscado.descripcion, buscado.precioAlquiler, buscado.existencias);
+                    dataGridArtículos.Rows.Add(buscado.idArticulo, buscado.categoria, buscado.descripcion, buscado.precioAlquiler, buscado.existencias);
                 }
                 else
                 {
@@ -188,8 +180,22 @@ namespace Presentacion
                 if (result == DialogResult.Yes)
                 {
                     logica.Eliminar(dataGridArtículos.CurrentRow.Cells["ComId"].Value.ToString());
-                    CargarDatosTabla();
+
                     MessageBox.Show("El articulo ha sido eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            CargarDatosTabla();
+        }
+
+        private void dataGridArtículos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridArtículos.Columns[e.ColumnIndex].Name=="btnEliminar")
+            {
+                var result = MessageBox.Show("¿Está seguro de que desea eliminar este artículo?", "Confirmación de Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    logica.Eliminar(dataGridArtículos.CurrentRow.Cells["Id"].Value.ToString());
                 }
             }
         }
