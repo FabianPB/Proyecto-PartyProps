@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Articulos));
             Txt_Id = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -339,6 +340,7 @@
             // btnActualizar
             // 
             btnActualizar.HeaderText = "ACT";
+            btnActualizar.Image = (System.Drawing.Image)resources.GetObject("btnActualizar.Image");
             btnActualizar.MinimumWidth = 6;
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Width = 46;
@@ -346,6 +348,7 @@
             // btnEliminar
             // 
             btnEliminar.HeaderText = "X";
+            btnEliminar.Image = (System.Drawing.Image)resources.GetObject("btnEliminar.Image");
             btnEliminar.MinimumWidth = 6;
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Width = 25;
