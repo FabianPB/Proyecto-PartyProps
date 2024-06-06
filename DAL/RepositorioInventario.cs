@@ -18,6 +18,8 @@ namespace DAL
             escribir.WriteLine(articulo.ToString());
             escribir.Close();
         }
+
+
         private Articulo MapearInventario(string[]? valorLineas) //el tipo de valor que se va a resivir
         {
             var idArticulo = valorLineas[0];

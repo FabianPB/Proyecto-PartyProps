@@ -9,8 +9,6 @@ namespace DAL
 {
     public interface IRepositorioInventario
     {
-
-
         public void Registrar(Articulo articulo);
 
         public Articulo EncontrarArticulo(string id);
