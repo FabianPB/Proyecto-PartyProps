@@ -19,7 +19,7 @@ namespace BLL
         
         public Articulo Buscar(string idArticulo);
         
-        public void Eliminar(Articulo articulo);
+        public void Eliminar(string idArticulo);
 
         public List<Articulo> ListaArticulo();
 

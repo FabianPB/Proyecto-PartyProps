@@ -49,6 +49,15 @@ namespace Presentacion
                 MessageBox.Show("El nombre solo permite letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (cbCategoria.SelectedItem != null)
+            {
+                articulo.categoria = cbCategoria.Text;
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una categoria", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (ValidarNumero(Txt_Id.Text))
             {
@@ -79,7 +88,9 @@ namespace Presentacion
                 return;
             }
             logica.Registrar(articulo);
+            CargarDatosTabla();
             MessageBox.Show("Artículo registrado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
         private void CargarDatosTabla()
         {
@@ -87,7 +98,6 @@ namespace Presentacion
 
             if (!File.Exists(rutaArchivo))
             {
-                MessageBox.Show("El archivo no existe.");
                 return;
             }
 
@@ -98,9 +108,9 @@ namespace Presentacion
             foreach (string linea in lineas)
             {
                 string[] datos = linea.Split(',');
-                if (datos.Length == 5)
+                if (datos.Length == 6)
                 {
-                    dataGridArtículos.Rows.Add(datos[0], datos[1], datos[2], datos[3], datos[4]);
+                    dataGridArtículos.Rows.Add(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]);
                 }
             }
         }
@@ -135,6 +145,41 @@ namespace Presentacion
             return true;
         }
 
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtBuscar.Text.Length == 0)
+                {
+                    CargarDatosTabla();
+                    return;
+                }
+                var buscado = logica.Buscar(txtBuscar.Text);
+                if (buscado != null)
+                {
+                    dataGridArtículos.Rows.Clear();
+                    dataGridArtículos.Rows.Add(buscado.idArticulo, buscado.nombreArticulo, buscado.categoria, buscado.descripcion, buscado.precioAlquiler, buscado.existencias);
+                }
+                else
+                {
+                    MessageBox.Show("El articulo no existe", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
+            }
+        }
+
+        private void dataGridArtículos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridArtículos.Columns[e.ColumnIndex].Name == "btnEliminar")
+            {
+                var result = MessageBox.Show("¿Estás seguro de que deseas eliminar el articulo?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    logica.Eliminar(dataGridArtículos.CurrentRow.Cells["ComId"].Value.ToString());
+                    CargarDatosTabla();
+                    MessageBox.Show("El articulo ha sido eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

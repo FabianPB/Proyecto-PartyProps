@@ -22,37 +22,21 @@ namespace DAL
         {
             var idArticulo = valorLineas[0];
             var nombreArticulo = valorLineas[1];
-            var descripcion = valorLineas[2];
-            var precioAlquiler = double.Parse(valorLineas[3]);
-            var existencias = int.Parse(valorLineas[4]);
-            var articulo = new Articulo(idArticulo, nombreArticulo, descripcion, precioAlquiler, existencias);
+            var categoria = valorLineas[2];
+            var descripcion = valorLineas[3];
+            var precioAlquiler = double.Parse(valorLineas[4]);
+            var existencias = int.Parse(valorLineas[5]);
+            var articulo = new Articulo(idArticulo,categoria, nombreArticulo, descripcion, precioAlquiler, existencias);
             return articulo;
         }
         public Articulo EncontrarArticulo(string id)
         {
-            var FileArticulo = "./Articulo.csv";
-            var opciones = new FileStreamOptions()
+            foreach (var item in EncontrarArticulos())
             {
-                Access = FileAccess.Read
-            };
-
-            using var leer = new StreamReader(FileArticulo, opciones);
-            var linea = leer.ReadLine();
-            while (linea != null)
-            {
-                var valorLineas = linea.Split(','); // Agregamos esta línea para dividir la línea en valores
-                var idArticulo = valorLineas[0];
-                var nombreArticulo = valorLineas[1];
-                var descripcion = valorLineas[2];
-                var precioAlquiler = double.Parse(valorLineas[3]);
-                var existencias = int.Parse(valorLineas[4]);
-                var articulo = new Articulo(idArticulo, nombreArticulo, descripcion, precioAlquiler, existencias);
-
-                if (idArticulo == id)
+                if (item.idArticulo.Equals(id))
                 {
-                    return articulo;
+                    return item;
                 }
-                linea = leer.ReadLine();
             }
             return null;
         }
@@ -77,18 +61,31 @@ namespace DAL
             return articulos; // Devolver la lista de articulos
         }
 
-        public void EliminarArticulo(Articulo ArticuloEliminar)
+        public void EliminarArticulo(string idArticulo)
         {
             var articulos = EncontrarArticulos();
-            var ArticuloEncontrado = articulos.FirstOrDefault(articulo => articulo.idArticulo == ArticuloEliminar.idArticulo);
+            var ArticuloEncontrado = articulos.FirstOrDefault(articulo => articulo.idArticulo.Equals(idArticulo));
             if (ArticuloEncontrado == null)
                 return;
-            articulos.Remove(ArticuloEncontrado);
-            var repositorioInventario = new RepositorioInventario();
+            foreach (var item in articulos)
+            {
+                if (item.idArticulo.Equals(ArticuloEncontrado.idArticulo))
+                {
+                    articulos.Remove(item);
+                    break;
+                }
+            }
+            FileStreamOptions opciones = new FileStreamOptions()
+            {
+                Mode = FileMode.Append,
+                Access = FileAccess.Write,
+            };
+            StreamWriter escribir = new StreamWriter(FileInventario, false);
             foreach (var articulo in articulos)
             {
-                repositorioInventario.Registrar(articulo);
+                escribir.WriteLine(articulo.ToString());
             }
+            escribir.Close();
         }
         public void ModificarArticulo(Articulo ArticuloModificar)
         {

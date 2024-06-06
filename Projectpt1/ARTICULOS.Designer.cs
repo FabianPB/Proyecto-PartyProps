@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Articulos));
             Txt_Id = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -52,11 +51,11 @@
             ComDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComExistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ComActualizar = new System.Windows.Forms.DataGridViewImageColumn();
-            ComEliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            btnActualizar = new System.Windows.Forms.DataGridViewImageColumn();
+            btnEliminar = new System.Windows.Forms.DataGridViewImageColumn();
             label7 = new System.Windows.Forms.Label();
             cbCategoria = new System.Windows.Forms.ComboBox();
-            textBox1 = new System.Windows.Forms.TextBox();
+            txtBuscar = new System.Windows.Forms.TextBox();
             label8 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
@@ -183,7 +182,7 @@
             btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            btnRegistrar.Location = new System.Drawing.Point(451, 436);
+            btnRegistrar.Location = new System.Drawing.Point(44, 436);
             btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new System.Drawing.Size(111, 37);
@@ -220,7 +219,7 @@
             dataGridArtículos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridArtículos.ColumnHeadersHeight = 30;
             dataGridArtículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComNombre, ComCategoria, ComDescripcion, ComPrecio, ComExistencias, ComActualizar, ComEliminar });
+            dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComNombre, ComCategoria, ComDescripcion, ComPrecio, ComExistencias, btnActualizar, btnEliminar });
             dataGridArtículos.EnableHeadersVisualStyles = false;
             dataGridArtículos.GridColor = System.Drawing.Color.Black;
             dataGridArtículos.Location = new System.Drawing.Point(192, 185);
@@ -244,6 +243,7 @@
             dataGridArtículos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridArtículos.Size = new System.Drawing.Size(679, 247);
             dataGridArtículos.TabIndex = 14;
+            dataGridArtículos.CellClick += dataGridArtículos_CellClick;
             // 
             // ComId
             // 
@@ -286,19 +286,17 @@
             ComExistencias.Name = "ComExistencias";
             ComExistencias.Width = 97;
             // 
-            // ComActualizar
+            // btnActualizar
             // 
-            ComActualizar.HeaderText = "Actualizar";
-            ComActualizar.Image = (System.Drawing.Image)resources.GetObject("ComActualizar.Image");
-            ComActualizar.Name = "ComActualizar";
-            ComActualizar.Width = 73;
+            btnActualizar.HeaderText = "ACT";
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Width = 39;
             // 
-            // ComEliminar
+            // btnEliminar
             // 
-            ComEliminar.HeaderText = "Eliminar";
-            ComEliminar.Image = (System.Drawing.Image)resources.GetObject("ComEliminar.Image");
-            ComEliminar.Name = "ComEliminar";
-            ComEliminar.Width = 62;
+            btnEliminar.HeaderText = "X";
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Width = 22;
             // 
             // label7
             // 
@@ -319,14 +317,15 @@
             cbCategoria.Size = new System.Drawing.Size(149, 23);
             cbCategoria.TabIndex = 16;
             // 
-            // textBox1
+            // txtBuscar
             // 
-            textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            textBox1.Location = new System.Drawing.Point(307, 121);
-            textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(165, 23);
-            textBox1.TabIndex = 17;
+            txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtBuscar.Location = new System.Drawing.Point(307, 121);
+            txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new System.Drawing.Size(165, 23);
+            txtBuscar.TabIndex = 17;
+            txtBuscar.KeyDown += textBox1_KeyDown;
             // 
             // label8
             // 
@@ -355,10 +354,10 @@
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
-            ClientSize = new System.Drawing.Size(791, 479);
+            ClientSize = new System.Drawing.Size(871, 503);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox1);
+            Controls.Add(txtBuscar);
             Controls.Add(cbCategoria);
             Controls.Add(label7);
             Controls.Add(dataGridArtículos);
@@ -403,16 +402,16 @@
         private System.Windows.Forms.DataGridView dataGridArtículos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbCategoria;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComExistencias;
-        private System.Windows.Forms.DataGridViewImageColumn ComActualizar;
-        private System.Windows.Forms.DataGridViewImageColumn ComEliminar;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewImageColumn btnActualizar;
+        private System.Windows.Forms.DataGridViewImageColumn btnEliminar;
     }
 }

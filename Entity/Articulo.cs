@@ -11,14 +11,16 @@ namespace Entity
         public string idArticulo { get; set; }
         public string nombreArticulo { get; set; }
         public string descripcion { get; set; }
+        public string categoria { get; set; }
         public double precioAlquiler { get; set; }
         public int existencias { get; set; }
 
-        public Articulo(string idArticulo, string nombreArticulo, string descripcion, double precioAlquiler, int existencias)
+        public Articulo(string idArticulo, string nombreArticulo,string categoria, string descripcion, double precioAlquiler, int existencias)
         {
             this.idArticulo = idArticulo;
             this.nombreArticulo = nombreArticulo;
             this.descripcion = descripcion;
+            this.categoria = categoria;
             this.precioAlquiler = precioAlquiler;
             this.existencias = existencias;
         }
@@ -28,7 +30,7 @@ namespace Entity
         }
         public override string ToString()
         {
-            return $"{idArticulo},{nombreArticulo},{descripcion},{precioAlquiler},{existencias} ";
+            return $"{idArticulo},{nombreArticulo},{categoria},{descripcion},{precioAlquiler},{existencias} ";
         }
     }
 }

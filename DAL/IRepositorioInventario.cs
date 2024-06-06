@@ -17,7 +17,7 @@ namespace DAL
 
         public List<Articulo> EncontrarArticulos();
 
-        public void EliminarArticulo(Articulo ArticuloEliminar);
+        public void EliminarArticulo(string idEliminar);
 
         public void ModificarArticulo(Articulo ArticuloModificar);
     }
