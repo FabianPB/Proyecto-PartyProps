@@ -94,25 +94,37 @@ namespace Presentacion
         }
         private void CargarDatosTabla()
         {
-            string rutaArchivo = @"C:\\Users\\HOME\\OneDrive\\Escritorio\\PROYECTO\\Projectpt1\\bin\\Debug\\net8.0-windows\\Inventario.csv";
+            //string rutaArchivo = @"C:\\Users\\HOME\\OneDrive\\Escritorio\\PROYECTO\\Projectpt1\\bin\\Debug\\net8.0-windows\\Inventario.csv";
 
-            if (!File.Exists(rutaArchivo))
-            {
-                return;
-            }
+            //if (!File.Exists(rutaArchivo))
+            //{
+            //    return;
+            //}
 
-            string[] lineas = File.ReadAllLines(rutaArchivo);
+            //string[] lineas = File.ReadAllLines(rutaArchivo);
 
+            //dataGridArtículos.Rows.Clear();
+
+            //foreach (string linea in lineas)
+            //{
+            //    string[] datos = linea.Split(',');
+            //    if (datos.Length == 6)
+            //    {
+            //        dataGridArtículos.Rows.Add(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]);
+            //    }
+            //}
+
+
+
+            var articulos = logica.ListaArticulo();
             dataGridArtículos.Rows.Clear();
 
-            foreach (string linea in lineas)
+            foreach (var articulo in articulos)
             {
-                string[] datos = linea.Split(',');
-                if (datos.Length == 6)
-                {
-                    dataGridArtículos.Rows.Add(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]);
-                }
+              dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.nombreArticulo, articulo.categoria, articulo.descripcion, articulo.precioAlquiler, articulo.existencias);
             }
+
+
         }
         bool ValidarLetras(string campo)
         {

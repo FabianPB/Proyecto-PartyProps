@@ -10,28 +10,28 @@ namespace BLL
 {
     public class LogicaInventario : ILogicaIventario
     {
-        RepositorioInventario datos = new RepositorioInventario();
+        RepositorioInventario repositorioInventario = new RepositorioInventario();
         
 
 
         public void Registrar(Articulo articulo)
         {
 
-            datos.Registrar(articulo);
+            repositorioInventario.Registrar(articulo);
              
         }
         public Articulo Buscar(string idArticulo)
         {
-            return datos.EncontrarArticulo(idArticulo);
+            return repositorioInventario.EncontrarArticulo(idArticulo);
         }
         public void Eliminar(string idArticulo)
         {
-            datos.EliminarArticulo(idArticulo);
+            repositorioInventario.EliminarArticulo(idArticulo);
         }
         public List<Articulo> ListaArticulo()
         {
-            var articulos = datos.EncontrarArticulos();
-            return datos.EncontrarArticulos();
+            var articulos = repositorioInventario.EncontrarArticulos();
+            return repositorioInventario.EncontrarArticulos();
         }
     }
 }
