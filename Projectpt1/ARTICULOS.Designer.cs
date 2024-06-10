@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Articulos));
             Txt_Id = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
@@ -59,27 +59,29 @@
             txtBuscar = new System.Windows.Forms.TextBox();
             label8 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
+            panelArticulos = new System.Windows.Forms.Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).BeginInit();
+            panelArticulos.SuspendLayout();
             SuspendLayout();
             // 
             // Txt_Id
             // 
             Txt_Id.Cursor = System.Windows.Forms.Cursors.IBeam;
-            Txt_Id.Location = new System.Drawing.Point(25, 111);
-            Txt_Id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            Txt_Id.Location = new System.Drawing.Point(29, 153);
+            Txt_Id.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             Txt_Id.Name = "Txt_Id";
-            Txt_Id.Size = new System.Drawing.Size(149, 23);
+            Txt_Id.Size = new System.Drawing.Size(170, 27);
             Txt_Id.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(73, 90);
+            label1.Location = new System.Drawing.Point(83, 125);
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(26, 19);
+            label1.Size = new System.Drawing.Size(33, 21);
             label1.TabIndex = 1;
             label1.Text = "ID:";
             // 
@@ -88,10 +90,10 @@
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.ForeColor = System.Drawing.Color.Black;
-            label2.Location = new System.Drawing.Point(19, 9);
+            label2.Location = new System.Drawing.Point(22, 12);
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(287, 32);
+            label2.Size = new System.Drawing.Size(352, 39);
             label2.TabIndex = 2;
             label2.Text = "Registro de Artículos.";
             // 
@@ -99,80 +101,80 @@
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label3.Location = new System.Drawing.Point(52, 148);
+            label3.Location = new System.Drawing.Point(59, 202);
             label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(68, 19);
+            label3.Size = new System.Drawing.Size(82, 21);
             label3.TabIndex = 3;
             label3.Text = "Nombre:";
             // 
             // txtNombre
             // 
             txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtNombre.Location = new System.Drawing.Point(25, 169);
-            txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            txtNombre.Location = new System.Drawing.Point(29, 230);
+            txtNombre.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new System.Drawing.Size(148, 23);
+            txtNombre.Size = new System.Drawing.Size(169, 27);
             txtNombre.TabIndex = 4;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label4.Location = new System.Drawing.Point(52, 266);
+            label4.Location = new System.Drawing.Point(59, 360);
             label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(97, 19);
+            label4.Size = new System.Drawing.Size(117, 21);
             label4.TabIndex = 5;
             label4.Text = "Descripción :";
             // 
             // txtDescripcion
             // 
             txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtDescripcion.Location = new System.Drawing.Point(25, 287);
-            txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            txtDescripcion.Location = new System.Drawing.Point(29, 388);
+            txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new System.Drawing.Size(149, 23);
+            txtDescripcion.Size = new System.Drawing.Size(170, 27);
             txtDescripcion.TabIndex = 6;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label5.Location = new System.Drawing.Point(31, 388);
+            label5.Location = new System.Drawing.Point(35, 522);
             label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(143, 19);
+            label5.Size = new System.Drawing.Size(174, 21);
             label5.TabIndex = 7;
             label5.Text = "Precio Alquiler C/U :";
             // 
             // txtPrecio
             // 
             txtPrecio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtPrecio.Location = new System.Drawing.Point(26, 349);
-            txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            txtPrecio.Location = new System.Drawing.Point(30, 470);
+            txtPrecio.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new System.Drawing.Size(148, 23);
+            txtPrecio.Size = new System.Drawing.Size(169, 27);
             txtPrecio.TabIndex = 8;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label6.Location = new System.Drawing.Point(52, 328);
+            label6.Location = new System.Drawing.Point(59, 442);
             label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(85, 19);
+            label6.Size = new System.Drawing.Size(102, 21);
             label6.TabIndex = 9;
             label6.Text = "Cantidad :";
             // 
             // txtCantidad
             // 
             txtCantidad.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtCantidad.Location = new System.Drawing.Point(26, 409);
-            txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            txtCantidad.Location = new System.Drawing.Point(30, 550);
+            txtCantidad.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new System.Drawing.Size(149, 23);
+            txtCantidad.Size = new System.Drawing.Size(170, 27);
             txtCantidad.TabIndex = 10;
             // 
             // btnRegistrar
@@ -183,10 +185,10 @@
             btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            btnRegistrar.Location = new System.Drawing.Point(44, 436);
-            btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            btnRegistrar.Location = new System.Drawing.Point(50, 586);
+            btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new System.Drawing.Size(111, 37);
+            btnRegistrar.Size = new System.Drawing.Size(127, 49);
             btnRegistrar.TabIndex = 11;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = false;
@@ -196,10 +198,9 @@
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
             panel1.Controls.Add(label2);
-            panel1.Location = new System.Drawing.Point(25, 17);
-            panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            panel1.Location = new System.Drawing.Point(29, 28);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(809, 47);
+            panel1.Size = new System.Drawing.Size(925, 63);
             panel1.TabIndex = 13;
             // 
             // dataGridArtículos
@@ -210,39 +211,38 @@
             dataGridArtículos.BackgroundColor = System.Drawing.Color.FromArgb(255, 227, 234);
             dataGridArtículos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridArtículos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridArtículos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridArtículos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridArtículos.ColumnHeadersHeight = 30;
             dataGridArtículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComNombre, ComDescripcion, ComCategoria, ComPrecio, ComExistencias, btnActualizar, btnEliminar });
             dataGridArtículos.EnableHeadersVisualStyles = false;
             dataGridArtículos.GridColor = System.Drawing.Color.Black;
-            dataGridArtículos.Location = new System.Drawing.Point(192, 185);
-            dataGridArtículos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dataGridArtículos.Location = new System.Drawing.Point(219, 252);
             dataGridArtículos.Name = "dataGridArtículos";
             dataGridArtículos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridArtículos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridArtículos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridArtículos.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridArtículos.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridArtículos.Size = new System.Drawing.Size(679, 247);
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridArtículos.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridArtículos.Size = new System.Drawing.Size(776, 329);
             dataGridArtículos.TabIndex = 14;
             dataGridArtículos.CellClick += dataGridArtículos_CellClick;
             dataGridArtículos.CellContentClick += dataGridArtículos_CellContentClick;
@@ -252,42 +252,42 @@
             ComId.HeaderText = "Id";
             ComId.MinimumWidth = 6;
             ComId.Name = "ComId";
-            ComId.Width = 45;
+            ComId.Width = 53;
             // 
             // ComNombre
             // 
             ComNombre.HeaderText = "Nombre";
             ComNombre.MinimumWidth = 6;
             ComNombre.Name = "ComNombre";
-            ComNombre.Width = 83;
+            ComNombre.Width = 101;
             // 
             // ComDescripcion
             // 
             ComDescripcion.HeaderText = "Descripcion";
             ComDescripcion.MinimumWidth = 6;
             ComDescripcion.Name = "ComDescripcion";
-            ComDescripcion.Width = 103;
+            ComDescripcion.Width = 126;
             // 
             // ComCategoria
             // 
             ComCategoria.HeaderText = "Categoría";
             ComCategoria.MinimumWidth = 6;
             ComCategoria.Name = "ComCategoria";
-            ComCategoria.Width = 92;
+            ComCategoria.Width = 112;
             // 
             // ComPrecio
             // 
             ComPrecio.HeaderText = "Precio";
             ComPrecio.MinimumWidth = 6;
             ComPrecio.Name = "ComPrecio";
-            ComPrecio.Width = 70;
+            ComPrecio.Width = 85;
             // 
             // ComExistencias
             // 
             ComExistencias.HeaderText = "Existencias";
             ComExistencias.MinimumWidth = 6;
             ComExistencias.Name = "ComExistencias";
-            ComExistencias.Width = 97;
+            ComExistencias.Width = 119;
             // 
             // btnActualizar
             // 
@@ -295,7 +295,7 @@
             btnActualizar.Image = (System.Drawing.Image)resources.GetObject("btnActualizar.Image");
             btnActualizar.MinimumWidth = 6;
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Width = 39;
+            btnActualizar.Width = 46;
             // 
             // btnEliminar
             // 
@@ -303,34 +303,34 @@
             btnEliminar.Image = (System.Drawing.Image)resources.GetObject("btnEliminar.Image");
             btnEliminar.MinimumWidth = 6;
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Width = 22;
+            btnEliminar.Width = 25;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label7.Location = new System.Drawing.Point(52, 205);
+            label7.Location = new System.Drawing.Point(59, 278);
             label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(87, 19);
+            label7.Size = new System.Drawing.Size(106, 21);
             label7.TabIndex = 15;
             label7.Text = "Categoría :";
             // 
             // cbCategoria
             // 
             cbCategoria.FormattingEnabled = true;
-            cbCategoria.Location = new System.Drawing.Point(25, 227);
+            cbCategoria.Location = new System.Drawing.Point(29, 308);
+            cbCategoria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             cbCategoria.Name = "cbCategoria";
-            cbCategoria.Size = new System.Drawing.Size(149, 23);
+            cbCategoria.Size = new System.Drawing.Size(170, 28);
             cbCategoria.TabIndex = 16;
             // 
             // txtBuscar
             // 
             txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtBuscar.Location = new System.Drawing.Point(307, 121);
-            txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtBuscar.Location = new System.Drawing.Point(351, 166);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new System.Drawing.Size(165, 23);
+            txtBuscar.Size = new System.Drawing.Size(188, 27);
             txtBuscar.TabIndex = 17;
             txtBuscar.KeyDown += textBox1_KeyDown;
             // 
@@ -338,9 +338,9 @@
             // 
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label8.Location = new System.Drawing.Point(194, 122);
+            label8.Location = new System.Drawing.Point(222, 168);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(107, 19);
+            label8.Size = new System.Drawing.Size(133, 23);
             label8.TabIndex = 18;
             label8.Text = "Buscar Artículo :";
             // 
@@ -349,46 +349,57 @@
             label9.AutoSize = true;
             label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label9.ForeColor = System.Drawing.Color.Black;
-            label9.Location = new System.Drawing.Point(451, 160);
+            label9.Location = new System.Drawing.Point(515, 218);
             label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(164, 23);
+            label9.Size = new System.Drawing.Size(208, 28);
             label9.TabIndex = 19;
             label9.Text = "Lista de Artículos";
             // 
+            // panelArticulos
+            // 
+            panelArticulos.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
+            panelArticulos.Controls.Add(panel1);
+            panelArticulos.Controls.Add(label9);
+            panelArticulos.Controls.Add(Txt_Id);
+            panelArticulos.Controls.Add(label8);
+            panelArticulos.Controls.Add(label1);
+            panelArticulos.Controls.Add(txtBuscar);
+            panelArticulos.Controls.Add(label3);
+            panelArticulos.Controls.Add(cbCategoria);
+            panelArticulos.Controls.Add(txtNombre);
+            panelArticulos.Controls.Add(label7);
+            panelArticulos.Controls.Add(label4);
+            panelArticulos.Controls.Add(dataGridArtículos);
+            panelArticulos.Controls.Add(txtDescripcion);
+            panelArticulos.Controls.Add(label5);
+            panelArticulos.Controls.Add(btnRegistrar);
+            panelArticulos.Controls.Add(txtPrecio);
+            panelArticulos.Controls.Add(txtCantidad);
+            panelArticulos.Controls.Add(label6);
+            panelArticulos.Location = new System.Drawing.Point(0, 0);
+            panelArticulos.Name = "panelArticulos";
+            panelArticulos.Size = new System.Drawing.Size(995, 671);
+            panelArticulos.TabIndex = 14;
+            // 
             // Articulos
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
-            ClientSize = new System.Drawing.Size(871, 503);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(txtBuscar);
-            Controls.Add(cbCategoria);
-            Controls.Add(label7);
-            Controls.Add(dataGridArtículos);
-            Controls.Add(panel1);
-            Controls.Add(btnRegistrar);
-            Controls.Add(txtCantidad);
-            Controls.Add(label6);
-            Controls.Add(txtPrecio);
-            Controls.Add(label5);
-            Controls.Add(txtDescripcion);
-            Controls.Add(label4);
-            Controls.Add(txtNombre);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(Txt_Id);
+            ClientSize = new System.Drawing.Size(995, 671);
+            Controls.Add(panelArticulos);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             Name = "Articulos";
             Text = "ARTICULOS";
+            Resize += Articulos_Resize;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).EndInit();
+            panelArticulos.ResumeLayout(false);
+            panelArticulos.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -420,5 +431,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ComExistencias;
         private System.Windows.Forms.DataGridViewImageColumn btnActualizar;
         private System.Windows.Forms.DataGridViewImageColumn btnEliminar;
+        private System.Windows.Forms.Panel panelArticulos;
     }
 }

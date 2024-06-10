@@ -34,29 +34,30 @@
             panel1 = new System.Windows.Forms.Panel();
             label2 = new System.Windows.Forms.Label();
             dataGridArtículos = new System.Windows.Forms.DataGridView();
-            button2 = new System.Windows.Forms.Button();
-            btn = new System.Windows.Forms.Button();
-            label4 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
             ComIdFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComFechaEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComFechaDevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComPrecioTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            button2 = new System.Windows.Forms.Button();
+            btn = new System.Windows.Forms.Button();
+            label4 = new System.Windows.Forms.Label();
+            textBox1 = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            panelServicios = new System.Windows.Forms.Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).BeginInit();
+            panelServicios.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
             panel1.Controls.Add(label2);
-            panel1.Location = new System.Drawing.Point(63, 20);
-            panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            panel1.Location = new System.Drawing.Point(43, 44);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(770, 47);
+            panel1.Size = new System.Drawing.Size(880, 63);
             panel1.TabIndex = 14;
             // 
             // label2
@@ -64,10 +65,10 @@
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.ForeColor = System.Drawing.Color.Black;
-            label2.Location = new System.Drawing.Point(19, 9);
+            label2.Location = new System.Drawing.Point(22, 12);
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(246, 32);
+            label2.Size = new System.Drawing.Size(302, 39);
             label2.TabIndex = 2;
             label2.Text = "Pedidos Vigentes.";
             // 
@@ -91,8 +92,7 @@
             dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComIdFactura, ComCedula, ComNombreCliente, ComFechaEntrega, ComFechaDevolucion, ComPrecioTotal });
             dataGridArtículos.EnableHeadersVisualStyles = false;
             dataGridArtículos.GridColor = System.Drawing.Color.Black;
-            dataGridArtículos.Location = new System.Drawing.Point(63, 172);
-            dataGridArtículos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dataGridArtículos.Location = new System.Drawing.Point(43, 246);
             dataGridArtículos.Name = "dataGridArtículos";
             dataGridArtículos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -110,8 +110,50 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridArtículos.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridArtículos.Size = new System.Drawing.Size(724, 258);
+            dataGridArtículos.Size = new System.Drawing.Size(880, 344);
             dataGridArtículos.TabIndex = 16;
+            // 
+            // ComIdFactura
+            // 
+            ComIdFactura.HeaderText = "ID Factura";
+            ComIdFactura.MinimumWidth = 6;
+            ComIdFactura.Name = "ComIdFactura";
+            ComIdFactura.Width = 115;
+            // 
+            // ComCedula
+            // 
+            ComCedula.HeaderText = "Cedula";
+            ComCedula.MinimumWidth = 6;
+            ComCedula.Name = "ComCedula";
+            ComCedula.Width = 91;
+            // 
+            // ComNombreCliente
+            // 
+            ComNombreCliente.HeaderText = "Nombre Cliente";
+            ComNombreCliente.MinimumWidth = 6;
+            ComNombreCliente.Name = "ComNombreCliente";
+            ComNombreCliente.Width = 159;
+            // 
+            // ComFechaEntrega
+            // 
+            ComFechaEntrega.HeaderText = "Fecha Entrega";
+            ComFechaEntrega.MinimumWidth = 6;
+            ComFechaEntrega.Name = "ComFechaEntrega";
+            ComFechaEntrega.Width = 146;
+            // 
+            // ComFechaDevolucion
+            // 
+            ComFechaDevolucion.HeaderText = "Fecha Devolución";
+            ComFechaDevolucion.MinimumWidth = 6;
+            ComFechaDevolucion.Name = "ComFechaDevolucion";
+            ComFechaDevolucion.Width = 172;
+            // 
+            // ComPrecioTotal
+            // 
+            ComPrecioTotal.HeaderText = "Precio Total";
+            ComPrecioTotal.MinimumWidth = 6;
+            ComPrecioTotal.Name = "ComPrecioTotal";
+            ComPrecioTotal.Width = 126;
             // 
             // button2
             // 
@@ -121,10 +163,9 @@
             button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             button2.ForeColor = System.Drawing.Color.Black;
-            button2.Location = new System.Drawing.Point(305, 481);
-            button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            button2.Location = new System.Drawing.Point(349, 641);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(111, 37);
+            button2.Size = new System.Drawing.Size(127, 49);
             button2.TabIndex = 18;
             button2.Text = "Eliminar";
             button2.UseVisualStyleBackColor = false;
@@ -137,10 +178,9 @@
             btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             btn.ForeColor = System.Drawing.Color.Black;
-            btn.Location = new System.Drawing.Point(438, 481);
-            btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btn.Location = new System.Drawing.Point(501, 641);
             btn.Name = "btn";
-            btn.Size = new System.Drawing.Size(111, 37);
+            btn.Size = new System.Drawing.Size(127, 49);
             btn.TabIndex = 17;
             btn.Text = "Detalle";
             btn.UseVisualStyleBackColor = false;
@@ -149,94 +189,62 @@
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label4.Location = new System.Drawing.Point(63, 128);
+            label4.Location = new System.Drawing.Point(43, 188);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(105, 19);
+            label4.Size = new System.Drawing.Size(129, 23);
             label4.TabIndex = 21;
             label4.Text = "Buscar Factura :";
             // 
             // textBox1
             // 
             textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            textBox1.Location = new System.Drawing.Point(185, 127);
-            textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            textBox1.Location = new System.Drawing.Point(182, 186);
             textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(173, 23);
+            textBox1.Size = new System.Drawing.Size(197, 27);
             textBox1.TabIndex = 20;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(63, 87);
+            label1.Location = new System.Drawing.Point(43, 133);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(163, 23);
+            label1.Size = new System.Drawing.Size(196, 27);
             label1.TabIndex = 19;
             label1.Text = "Lista de Facturas";
             // 
-            // ComIdFactura
+            // panelServicios
             // 
-            ComIdFactura.HeaderText = "ID Factura";
-            ComIdFactura.MinimumWidth = 6;
-            ComIdFactura.Name = "ComIdFactura";
-            ComIdFactura.Width = 96;
-            // 
-            // ComCedula
-            // 
-            ComCedula.HeaderText = "Cedula";
-            ComCedula.Name = "ComCedula";
-            ComCedula.Width = 75;
-            // 
-            // ComNombreCliente
-            // 
-            ComNombreCliente.HeaderText = "Nombre Cliente";
-            ComNombreCliente.MinimumWidth = 6;
-            ComNombreCliente.Name = "ComNombreCliente";
-            ComNombreCliente.Width = 129;
-            // 
-            // ComFechaEntrega
-            // 
-            ComFechaEntrega.HeaderText = "Fecha Entrega";
-            ComFechaEntrega.MinimumWidth = 6;
-            ComFechaEntrega.Name = "ComFechaEntrega";
-            ComFechaEntrega.Width = 119;
-            // 
-            // ComFechaDevolucion
-            // 
-            ComFechaDevolucion.HeaderText = "Fecha Devolución";
-            ComFechaDevolucion.MinimumWidth = 6;
-            ComFechaDevolucion.Name = "ComFechaDevolucion";
-            ComFechaDevolucion.Width = 140;
-            // 
-            // ComPrecioTotal
-            // 
-            ComPrecioTotal.HeaderText = "Precio Total";
-            ComPrecioTotal.MinimumWidth = 6;
-            ComPrecioTotal.Name = "ComPrecioTotal";
-            ComPrecioTotal.Width = 103;
+            panelServicios.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
+            panelServicios.Controls.Add(panel1);
+            panelServicios.Controls.Add(label4);
+            panelServicios.Controls.Add(dataGridArtículos);
+            panelServicios.Controls.Add(textBox1);
+            panelServicios.Controls.Add(label1);
+            panelServicios.Location = new System.Drawing.Point(1, 0);
+            panelServicios.Name = "panelServicios";
+            panelServicios.Size = new System.Drawing.Size(1011, 740);
+            panelServicios.TabIndex = 15;
             // 
             // SERVICIOS
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
-            ClientSize = new System.Drawing.Size(885, 555);
-            Controls.Add(label4);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            ClientSize = new System.Drawing.Size(1011, 740);
+            Controls.Add(panelServicios);
             Controls.Add(button2);
             Controls.Add(btn);
-            Controls.Add(dataGridArtículos);
-            Controls.Add(panel1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "SERVICIOS";
             Text = "SERVICIOS";
+            Resize += SERVICIOS_Resize;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).EndInit();
+            panelServicios.ResumeLayout(false);
+            panelServicios.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -255,5 +263,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ComFechaEntrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComFechaDevolucion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComPrecioTotal;
+        private System.Windows.Forms.Panel panelServicios;
     }
 }

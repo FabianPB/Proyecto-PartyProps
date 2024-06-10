@@ -18,12 +18,12 @@ namespace Presentacion
     public partial class RESERVAR : Form
     {
         LogicaInventario logicaInventario = new LogicaInventario();
-        
+
         public RESERVAR()
         {
             //CargarTablas();
             InitializeComponent();
-            
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace Presentacion
             //dataGridArtículos.Rows.Clear();
             foreach (var articulo in articulos)
             {
-                dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.descripcion,articulo.categoria,articulo.precioAlquiler, articulo.existencias);
+                dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.descripcion, articulo.categoria, articulo.precioAlquiler, articulo.existencias);
             }
 
         }
@@ -129,6 +129,24 @@ namespace Presentacion
         private void RESERVAR_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void RESERVAR_Resize(object sender, EventArgs e)
+        {
+            CenterControls();
+        }
+
+        private void CenterControls()
+        {
+
+            Panel panelContent = this.panelReservar;
+
+            // Calcula la posición para centrar el panel
+            int x = (this.ClientSize.Width - panelContent.Width) / 2;
+            int y = (this.ClientSize.Height - panelContent.Height) / 6;
+
+
+            panelContent.Location = new Point(x, y);
         }
     }
 }

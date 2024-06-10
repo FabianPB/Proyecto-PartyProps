@@ -189,7 +189,7 @@ namespace Presentacion
 
         private void dataGridArtículos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridArtículos.Columns[e.ColumnIndex].Name=="btnEliminar")
+            if (dataGridArtículos.Columns[e.ColumnIndex].Name == "btnEliminar")
             {
                 var result = MessageBox.Show("¿Está seguro de que desea eliminar este artículo?", "Confirmación de Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -198,6 +198,24 @@ namespace Presentacion
                     logica.Eliminar(dataGridArtículos.CurrentRow.Cells["Id"].Value.ToString());
                 }
             }
+        }
+
+        private void Articulos_Resize(object sender, EventArgs e)
+        {
+            CenterControls();
+        }
+
+        private void CenterControls()
+        {
+
+            Panel panelContent = this.panelArticulos;
+
+            // Calcula la posición para centrar el panel
+            int x = (this.ClientSize.Width - panelContent.Width) / 2;
+            int y = (this.ClientSize.Height - panelContent.Height) / 6;
+
+
+            panelContent.Location = new Point(x, y);
         }
     }
 }
