@@ -34,17 +34,17 @@
             panel1 = new System.Windows.Forms.Panel();
             label2 = new System.Windows.Forms.Label();
             dataGridArtículos = new System.Windows.Forms.DataGridView();
-            button2 = new System.Windows.Forms.Button();
-            btn = new System.Windows.Forms.Button();
-            label4 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
             ComIdFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComFechaEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComFechaDevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComPrecioTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            button2 = new System.Windows.Forms.Button();
+            btn = new System.Windows.Forms.Button();
+            label4 = new System.Windows.Forms.Label();
+            textBox1 = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).BeginInit();
             SuspendLayout();
@@ -112,6 +112,48 @@
             dataGridArtículos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridArtículos.Size = new System.Drawing.Size(724, 258);
             dataGridArtículos.TabIndex = 16;
+            dataGridArtículos.SelectionChanged += dataGridArtículos_SelectionChanged;
+            // 
+            // ComIdFactura
+            // 
+            ComIdFactura.HeaderText = "ID Factura";
+            ComIdFactura.MinimumWidth = 6;
+            ComIdFactura.Name = "ComIdFactura";
+            ComIdFactura.Width = 96;
+            // 
+            // ComCedula
+            // 
+            ComCedula.HeaderText = "Cedula";
+            ComCedula.Name = "ComCedula";
+            ComCedula.Width = 75;
+            // 
+            // ComNombreCliente
+            // 
+            ComNombreCliente.HeaderText = "Nombre Cliente";
+            ComNombreCliente.MinimumWidth = 6;
+            ComNombreCliente.Name = "ComNombreCliente";
+            ComNombreCliente.Width = 129;
+            // 
+            // ComFechaEntrega
+            // 
+            ComFechaEntrega.HeaderText = "Fecha Entrega";
+            ComFechaEntrega.MinimumWidth = 6;
+            ComFechaEntrega.Name = "ComFechaEntrega";
+            ComFechaEntrega.Width = 119;
+            // 
+            // ComFechaDevolucion
+            // 
+            ComFechaDevolucion.HeaderText = "Fecha Devolución";
+            ComFechaDevolucion.MinimumWidth = 6;
+            ComFechaDevolucion.Name = "ComFechaDevolucion";
+            ComFechaDevolucion.Width = 140;
+            // 
+            // ComPrecioTotal
+            // 
+            ComPrecioTotal.HeaderText = "Precio Total";
+            ComPrecioTotal.MinimumWidth = 6;
+            ComPrecioTotal.Name = "ComPrecioTotal";
+            ComPrecioTotal.Width = 103;
             // 
             // button2
             // 
@@ -174,47 +216,6 @@
             label1.TabIndex = 19;
             label1.Text = "Lista de Facturas";
             // 
-            // ComIdFactura
-            // 
-            ComIdFactura.HeaderText = "ID Factura";
-            ComIdFactura.MinimumWidth = 6;
-            ComIdFactura.Name = "ComIdFactura";
-            ComIdFactura.Width = 96;
-            // 
-            // ComCedula
-            // 
-            ComCedula.HeaderText = "Cedula";
-            ComCedula.Name = "ComCedula";
-            ComCedula.Width = 75;
-            // 
-            // ComNombreCliente
-            // 
-            ComNombreCliente.HeaderText = "Nombre Cliente";
-            ComNombreCliente.MinimumWidth = 6;
-            ComNombreCliente.Name = "ComNombreCliente";
-            ComNombreCliente.Width = 129;
-            // 
-            // ComFechaEntrega
-            // 
-            ComFechaEntrega.HeaderText = "Fecha Entrega";
-            ComFechaEntrega.MinimumWidth = 6;
-            ComFechaEntrega.Name = "ComFechaEntrega";
-            ComFechaEntrega.Width = 119;
-            // 
-            // ComFechaDevolucion
-            // 
-            ComFechaDevolucion.HeaderText = "Fecha Devolución";
-            ComFechaDevolucion.MinimumWidth = 6;
-            ComFechaDevolucion.Name = "ComFechaDevolucion";
-            ComFechaDevolucion.Width = 140;
-            // 
-            // ComPrecioTotal
-            // 
-            ComPrecioTotal.HeaderText = "Precio Total";
-            ComPrecioTotal.MinimumWidth = 6;
-            ComPrecioTotal.Name = "ComPrecioTotal";
-            ComPrecioTotal.Width = 103;
-            // 
             // SERVICIOS
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -232,6 +233,7 @@
             Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "SERVICIOS";
             Text = "SERVICIOS";
+            Load += SERVICIOS_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).EndInit();

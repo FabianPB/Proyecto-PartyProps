@@ -35,8 +35,6 @@
             Txt_Id = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            txtNombre = new System.Windows.Forms.TextBox();
             label4 = new System.Windows.Forms.Label();
             txtDescripcion = new System.Windows.Forms.TextBox();
             label5 = new System.Windows.Forms.Label();
@@ -46,19 +44,18 @@
             btnRegistrar = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
             dataGridArtículos = new System.Windows.Forms.DataGridView();
+            label7 = new System.Windows.Forms.Label();
+            cbCategoria = new System.Windows.Forms.ComboBox();
+            txtBuscar = new System.Windows.Forms.TextBox();
+            label8 = new System.Windows.Forms.Label();
+            label9 = new System.Windows.Forms.Label();
             ComId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ComNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComExistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             btnActualizar = new System.Windows.Forms.DataGridViewImageColumn();
             btnEliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            label7 = new System.Windows.Forms.Label();
-            cbCategoria = new System.Windows.Forms.ComboBox();
-            txtBuscar = new System.Windows.Forms.TextBox();
-            label8 = new System.Windows.Forms.Label();
-            label9 = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).BeginInit();
             SuspendLayout();
@@ -67,7 +64,7 @@
             // 
             Txt_Id.Cursor = System.Windows.Forms.Cursors.IBeam;
             Txt_Id.Location = new System.Drawing.Point(25, 111);
-            Txt_Id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            Txt_Id.Margin = new System.Windows.Forms.Padding(2);
             Txt_Id.Name = "Txt_Id";
             Txt_Id.Size = new System.Drawing.Size(149, 23);
             Txt_Id.TabIndex = 0;
@@ -95,31 +92,11 @@
             label2.TabIndex = 2;
             label2.Text = "Registro de Artículos.";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label3.Location = new System.Drawing.Point(52, 148);
-            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(68, 19);
-            label3.TabIndex = 3;
-            label3.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtNombre.Location = new System.Drawing.Point(25, 169);
-            txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new System.Drawing.Size(148, 23);
-            txtNombre.TabIndex = 4;
-            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label4.Location = new System.Drawing.Point(52, 266);
+            label4.Location = new System.Drawing.Point(52, 232);
             label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(97, 19);
@@ -129,8 +106,8 @@
             // txtDescripcion
             // 
             txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtDescripcion.Location = new System.Drawing.Point(25, 287);
-            txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            txtDescripcion.Location = new System.Drawing.Point(25, 253);
+            txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.Size = new System.Drawing.Size(149, 23);
             txtDescripcion.TabIndex = 6;
@@ -139,7 +116,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label5.Location = new System.Drawing.Point(31, 388);
+            label5.Location = new System.Drawing.Point(31, 375);
             label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(143, 19);
@@ -149,8 +126,8 @@
             // txtPrecio
             // 
             txtPrecio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtPrecio.Location = new System.Drawing.Point(26, 349);
-            txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            txtPrecio.Location = new System.Drawing.Point(26, 323);
+            txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new System.Drawing.Size(148, 23);
             txtPrecio.TabIndex = 8;
@@ -159,7 +136,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label6.Location = new System.Drawing.Point(52, 328);
+            label6.Location = new System.Drawing.Point(52, 302);
             label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(85, 19);
@@ -169,8 +146,8 @@
             // txtCantidad
             // 
             txtCantidad.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtCantidad.Location = new System.Drawing.Point(26, 409);
-            txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            txtCantidad.Location = new System.Drawing.Point(26, 396);
+            txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new System.Drawing.Size(149, 23);
             txtCantidad.TabIndex = 10;
@@ -184,7 +161,7 @@
             btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             btnRegistrar.ForeColor = System.Drawing.Color.Black;
             btnRegistrar.Location = new System.Drawing.Point(44, 436);
-            btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new System.Drawing.Size(111, 37);
             btnRegistrar.TabIndex = 11;
@@ -220,7 +197,7 @@
             dataGridArtículos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridArtículos.ColumnHeadersHeight = 30;
             dataGridArtículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComNombre, ComDescripcion, ComCategoria, ComPrecio, ComExistencias, btnActualizar, btnEliminar });
+            dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComDescripcion, ComCategoria, ComPrecio, ComExistencias, btnActualizar, btnEliminar });
             dataGridArtículos.EnableHeadersVisualStyles = false;
             dataGridArtículos.GridColor = System.Drawing.Color.Black;
             dataGridArtículos.Location = new System.Drawing.Point(192, 185);
@@ -247,19 +224,63 @@
             dataGridArtículos.CellClick += dataGridArtículos_CellClick;
             dataGridArtículos.CellContentClick += dataGridArtículos_CellContentClick;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label7.Location = new System.Drawing.Point(52, 163);
+            label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(87, 19);
+            label7.TabIndex = 15;
+            label7.Text = "Categoría :";
+            // 
+            // cbCategoria
+            // 
+            cbCategoria.FormattingEnabled = true;
+            cbCategoria.Location = new System.Drawing.Point(25, 185);
+            cbCategoria.Name = "cbCategoria";
+            cbCategoria.Size = new System.Drawing.Size(149, 23);
+            cbCategoria.TabIndex = 16;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtBuscar.Location = new System.Drawing.Point(307, 121);
+            txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new System.Drawing.Size(165, 23);
+            txtBuscar.TabIndex = 17;
+            txtBuscar.KeyDown += textBox1_KeyDown;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            label8.Location = new System.Drawing.Point(194, 122);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(107, 19);
+            label8.TabIndex = 18;
+            label8.Text = "Buscar Artículo :";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label9.ForeColor = System.Drawing.Color.Black;
+            label9.Location = new System.Drawing.Point(451, 160);
+            label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(164, 23);
+            label9.TabIndex = 19;
+            label9.Text = "Lista de Artículos";
+            // 
             // ComId
             // 
             ComId.HeaderText = "Id";
             ComId.MinimumWidth = 6;
             ComId.Name = "ComId";
             ComId.Width = 45;
-            // 
-            // ComNombre
-            // 
-            ComNombre.HeaderText = "Nombre";
-            ComNombre.MinimumWidth = 6;
-            ComNombre.Name = "ComNombre";
-            ComNombre.Width = 83;
             // 
             // ComDescripcion
             // 
@@ -305,57 +326,6 @@
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Width = 22;
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label7.Location = new System.Drawing.Point(52, 205);
-            label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(87, 19);
-            label7.TabIndex = 15;
-            label7.Text = "Categoría :";
-            // 
-            // cbCategoria
-            // 
-            cbCategoria.FormattingEnabled = true;
-            cbCategoria.Location = new System.Drawing.Point(25, 227);
-            cbCategoria.Name = "cbCategoria";
-            cbCategoria.Size = new System.Drawing.Size(149, 23);
-            cbCategoria.TabIndex = 16;
-            // 
-            // txtBuscar
-            // 
-            txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtBuscar.Location = new System.Drawing.Point(307, 121);
-            txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new System.Drawing.Size(165, 23);
-            txtBuscar.TabIndex = 17;
-            txtBuscar.KeyDown += textBox1_KeyDown;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label8.Location = new System.Drawing.Point(194, 122);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(107, 19);
-            label8.TabIndex = 18;
-            label8.Text = "Buscar Artículo :";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label9.ForeColor = System.Drawing.Color.Black;
-            label9.Location = new System.Drawing.Point(451, 160);
-            label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(164, 23);
-            label9.TabIndex = 19;
-            label9.Text = "Lista de Artículos";
-            // 
             // Articulos
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -376,12 +346,10 @@
             Controls.Add(label5);
             Controls.Add(txtDescripcion);
             Controls.Add(label4);
-            Controls.Add(txtNombre);
-            Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(Txt_Id);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            Margin = new System.Windows.Forms.Padding(2);
             Name = "Articulos";
             Text = "ARTICULOS";
             panel1.ResumeLayout(false);
@@ -396,8 +364,6 @@
         private System.Windows.Forms.TextBox Txt_Id;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label5;
@@ -413,7 +379,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComPrecio;

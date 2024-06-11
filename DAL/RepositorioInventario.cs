@@ -44,7 +44,7 @@ namespace DAL
                 descripcion = Convert.ToString(reader["Descripcion"]),
                 categoria = Convert.ToString(reader["Categoria"]),
                 precioAlquiler = Convert.ToDouble(reader["PrecioAlquiler"]),
-                existencias = Convert.ToInt16(reader["Existencias"])
+                existencias = Convert.ToInt32(reader["Existencias"])
             };
             return articulo;
 
@@ -53,6 +53,7 @@ namespace DAL
 
         public Articulo EncontrarArticulo(string id)
         {
+            
             foreach (var item in EncontrarArticulos())
             {
                 if (item.idArticulo.Equals(id))

@@ -28,55 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AGENDAR));
-            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            fecha1 = new System.Windows.Forms.DateTimePicker();
             label1 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            textBox1 = new System.Windows.Forms.TextBox();
+            fecha2 = new System.Windows.Forms.DateTimePicker();
+            txtIdFactura = new System.Windows.Forms.TextBox();
             label4 = new System.Windows.Forms.Label();
             btnRegistrar = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             label6 = new System.Windows.Forms.Label();
             dataGridArtículos = new System.Windows.Forms.DataGridView();
             ComId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ComNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ComExistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            colSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            btnEliminar = new System.Windows.Forms.DataGridViewImageColumn();
             panel1 = new System.Windows.Forms.Panel();
             label5 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             txtNombreCliente = new System.Windows.Forms.TextBox();
             label8 = new System.Windows.Forms.Label();
-            textBox2 = new System.Windows.Forms.TextBox();
-            pictureBox1 = new System.Windows.Forms.PictureBox();
+            txtIdArticulo = new System.Windows.Forms.TextBox();
+            btnAgregar = new System.Windows.Forms.PictureBox();
             label7 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
-            textBox4 = new System.Windows.Forms.TextBox();
+            txtCantidad = new System.Windows.Forms.TextBox();
             label10 = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
             label11 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
-            textBox3 = new System.Windows.Forms.TextBox();
+            txtCedula = new System.Windows.Forms.TextBox();
+            lbArticulo = new System.Windows.Forms.Label();
+            lbValor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnAgregar).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // dateTimePicker1
+            // fecha1
             // 
-            dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            dateTimePicker1.Location = new System.Drawing.Point(45, 309);
-            dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new System.Drawing.Size(162, 23);
-            dateTimePicker1.TabIndex = 4;
+            fecha1.Cursor = System.Windows.Forms.Cursors.Hand;
+            fecha1.Location = new System.Drawing.Point(45, 309);
+            fecha1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            fecha1.Name = "fecha1";
+            fecha1.Size = new System.Drawing.Size(162, 23);
+            fecha1.TabIndex = 4;
             // 
             // label1
             // 
@@ -100,23 +103,23 @@
             label3.TabIndex = 6;
             label3.Text = "Fecha de Devolución:";
             // 
-            // dateTimePicker2
+            // fecha2
             // 
-            dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Hand;
-            dateTimePicker2.Location = new System.Drawing.Point(45, 371);
-            dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new System.Drawing.Size(162, 23);
-            dateTimePicker2.TabIndex = 7;
+            fecha2.Cursor = System.Windows.Forms.Cursors.Hand;
+            fecha2.Location = new System.Drawing.Point(45, 371);
+            fecha2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            fecha2.Name = "fecha2";
+            fecha2.Size = new System.Drawing.Size(162, 23);
+            fecha2.TabIndex = 7;
             // 
-            // textBox1
+            // txtIdFactura
             // 
-            textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            textBox1.Location = new System.Drawing.Point(45, 120);
-            textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(162, 23);
-            textBox1.TabIndex = 8;
+            txtIdFactura.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtIdFactura.Location = new System.Drawing.Point(45, 120);
+            txtIdFactura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtIdFactura.Name = "txtIdFactura";
+            txtIdFactura.Size = new System.Drawing.Size(162, 23);
+            txtIdFactura.TabIndex = 8;
             // 
             // label4
             // 
@@ -180,38 +183,38 @@
             dataGridArtículos.BackgroundColor = System.Drawing.Color.FromArgb(255, 227, 234);
             dataGridArtículos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridArtículos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridArtículos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridArtículos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridArtículos.ColumnHeadersHeight = 30;
             dataGridArtículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComNombre, ComCategoria, ComDescripcion, ComPrecio, ComExistencias });
+            dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComCategoria, ComDescripcion, ComPrecio, ComExistencias, colSubtotal, btnEliminar });
             dataGridArtículos.EnableHeadersVisualStyles = false;
             dataGridArtículos.GridColor = System.Drawing.Color.Black;
             dataGridArtículos.Location = new System.Drawing.Point(237, 147);
             dataGridArtículos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             dataGridArtículos.Name = "dataGridArtículos";
             dataGridArtículos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridArtículos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridArtículos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridArtículos.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridArtículos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridArtículos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dataGridArtículos.Size = new System.Drawing.Size(641, 284);
             dataGridArtículos.TabIndex = 15;
             dataGridArtículos.CellContentClick += dataGridArtículos_CellContentClick;
@@ -222,13 +225,6 @@
             ComId.MinimumWidth = 6;
             ComId.Name = "ComId";
             ComId.Width = 45;
-            // 
-            // ComNombre
-            // 
-            ComNombre.HeaderText = "Nombre";
-            ComNombre.MinimumWidth = 6;
-            ComNombre.Name = "ComNombre";
-            ComNombre.Width = 83;
             // 
             // ComCategoria
             // 
@@ -256,6 +252,18 @@
             ComExistencias.MinimumWidth = 6;
             ComExistencias.Name = "ComExistencias";
             ComExistencias.Width = 97;
+            // 
+            // colSubtotal
+            // 
+            colSubtotal.HeaderText = "Subtotal";
+            colSubtotal.Name = "colSubtotal";
+            colSubtotal.Width = 84;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.HeaderText = "";
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Width = 5;
             // 
             // panel1
             // 
@@ -309,32 +317,33 @@
             label8.TabIndex = 20;
             label8.Text = "ID Artículo:";
             // 
-            // textBox2
+            // txtIdArticulo
             // 
-            textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            textBox2.Location = new System.Drawing.Point(311, 116);
-            textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(72, 23);
-            textBox2.TabIndex = 19;
-            textBox2.TextChanged += textBox2_TextChanged;
+            txtIdArticulo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtIdArticulo.Location = new System.Drawing.Point(311, 116);
+            txtIdArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtIdArticulo.Name = "txtIdArticulo";
+            txtIdArticulo.Size = new System.Drawing.Size(72, 23);
+            txtIdArticulo.TabIndex = 19;
+            txtIdArticulo.KeyDown += txtIdArticulo_KeyDown;
             // 
-            // pictureBox1
+            // btnAgregar
             // 
-            pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new System.Drawing.Point(784, 102);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(46, 40);
-            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 22;
-            pictureBox1.TabStop = false;
+            btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnAgregar.Image = (System.Drawing.Image)resources.GetObject("btnAgregar.Image");
+            btnAgregar.Location = new System.Drawing.Point(843, 99);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new System.Drawing.Size(46, 40);
+            btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            btnAgregar.TabIndex = 22;
+            btnAgregar.TabStop = false;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label7.Location = new System.Drawing.Point(389, 120);
+            label7.Location = new System.Drawing.Point(384, 116);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(63, 19);
             label7.TabIndex = 23;
@@ -344,26 +353,26 @@
             // 
             label9.AutoSize = true;
             label9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label9.Location = new System.Drawing.Point(633, 117);
+            label9.Location = new System.Drawing.Point(719, 120);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(67, 19);
             label9.TabIndex = 24;
             label9.Text = "Cantidad:";
             // 
-            // textBox4
+            // txtCantidad
             // 
-            textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            textBox4.Location = new System.Drawing.Point(706, 116);
-            textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(72, 23);
-            textBox4.TabIndex = 26;
+            txtCantidad.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtCantidad.Location = new System.Drawing.Point(792, 116);
+            txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new System.Drawing.Size(45, 23);
+            txtCantidad.TabIndex = 26;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label10.Location = new System.Drawing.Point(507, 120);
+            label10.Location = new System.Drawing.Point(502, 117);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(75, 19);
             label10.TabIndex = 27;
@@ -399,14 +408,30 @@
             label12.TabIndex = 29;
             label12.Text = "Cedula :";
             // 
-            // textBox3
+            // txtCedula
             // 
-            textBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            textBox3.Location = new System.Drawing.Point(45, 178);
-            textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(162, 23);
-            textBox3.TabIndex = 30;
+            txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtCedula.Location = new System.Drawing.Point(45, 178);
+            txtCedula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new System.Drawing.Size(162, 23);
+            txtCedula.TabIndex = 30;
+            // 
+            // lbArticulo
+            // 
+            lbArticulo.AutoSize = true;
+            lbArticulo.Location = new System.Drawing.Point(464, 122);
+            lbArticulo.Name = "lbArticulo";
+            lbArticulo.Size = new System.Drawing.Size(0, 15);
+            lbArticulo.TabIndex = 31;
+            // 
+            // lbValor
+            // 
+            lbValor.AutoSize = true;
+            lbValor.Location = new System.Drawing.Point(615, 123);
+            lbValor.Name = "lbValor";
+            lbValor.Size = new System.Drawing.Size(0, 15);
+            lbValor.TabIndex = 32;
             // 
             // AGENDAR
             // 
@@ -414,16 +439,18 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
             ClientSize = new System.Drawing.Size(890, 538);
-            Controls.Add(textBox3);
+            Controls.Add(lbValor);
+            Controls.Add(lbArticulo);
+            Controls.Add(txtCedula);
             Controls.Add(label12);
             Controls.Add(panel2);
             Controls.Add(label10);
-            Controls.Add(textBox4);
+            Controls.Add(txtCantidad);
             Controls.Add(label9);
             Controls.Add(label7);
-            Controls.Add(pictureBox1);
+            Controls.Add(btnAgregar);
             Controls.Add(label8);
-            Controls.Add(textBox2);
+            Controls.Add(txtIdArticulo);
             Controls.Add(label2);
             Controls.Add(txtNombreCliente);
             Controls.Add(panel1);
@@ -432,11 +459,11 @@
             Controls.Add(button2);
             Controls.Add(btnRegistrar);
             Controls.Add(label4);
-            Controls.Add(textBox1);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(txtIdFactura);
+            Controls.Add(fecha2);
             Controls.Add(label3);
             Controls.Add(label1);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(fecha1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "AGENDAR";
@@ -444,7 +471,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnAgregar).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -452,11 +479,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fecha1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker fecha2;
+        private System.Windows.Forms.TextBox txtIdFactura;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button button2;
@@ -466,22 +493,25 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ComExistencias;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtIdArticulo;
+        private System.Windows.Forms.PictureBox btnAgregar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.Label lbArticulo;
+        private System.Windows.Forms.Label lbValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComExistencias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSubtotal;
+        private System.Windows.Forms.DataGridViewImageColumn btnEliminar;
     }
 }

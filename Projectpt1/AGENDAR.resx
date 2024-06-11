@@ -120,9 +120,6 @@
   <metadata name="ComId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ComNombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="ComCategoria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -135,11 +132,17 @@
   <metadata name="ComExistencias.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="colSubtotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnEliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAgregar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABqpJREFUaEPtm2lsVFUUxwu0UKBs1U+yqomspeDyxQDRaIyKaDTqJ5FFUbaCgGVf
+        DAAACwwBP0AiyAAABqpJREFUaEPtm2lsVFUUxwu0UKBs1U+yqomspeDyxQDRaIyKaDTqJ5FFUbaCgGVf
         StkVZa+iBEQWQwTZsWpT2ctO2GQTqiioxCXqN40e83vkXt+bOZ3OzHuzIH74JZN7z3v3/mfucu45dzLk
         m6tyI/G/4KD59fQFObDlE1kxr0SmjxonowYWyKBefR34TNnK+SWODbbaO4IkcMF/ff29lH2wTob3GyCd
         O+RJzZo1JSMjIyqwvTOvo4x4aaCUr/nIeZfWhh8CE3z50HEZM3ioNL+lqSoGGjVoKLe1aCl5bdo68Jky

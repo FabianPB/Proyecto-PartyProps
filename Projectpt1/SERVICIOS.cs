@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Presentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,42 @@ namespace Projectpt1
 {
     public partial class SERVICIOS : Form
     {
+        LogicaAgendar agendar = new LogicaAgendar();
         public SERVICIOS()
         {
             InitializeComponent();
+            Cargartabla();
+        }
+        public void Cargartabla()
+        {
+            var facturas = agendar.LeerFacturas();
+            if (facturas != null)
+            {
+                dataGridArtículos.Rows.Clear();
+
+                foreach (var item in facturas)
+                {
+                    dataGridArtículos.Rows.Add(item.idFactura, item.CedulaCliente, item.NombreCliente, item.fechaFacturacion, item.fechaDevolucion, item.montoPago);
+                }
+            }
+        }
+
+
+        private void SERVICIOS_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridArtículos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridArtículos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridArtículos.SelectedRows[0];
+                // Accede a las celdas de la fila seleccionada
+                string idFactura = selectedRow.Cells["ComIdFactura"].Value.ToString();
+                VistaDetalles ventana = new VistaDetalles(idFactura);
+                ventana.Show();
+            }
         }
     }
 }

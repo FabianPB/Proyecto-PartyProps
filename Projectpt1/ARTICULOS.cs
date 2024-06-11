@@ -110,11 +110,14 @@ namespace Presentacion
 
             List<Articulo> articulos = logica.ListaArticulo();
             dataGridArtículos.Rows.Clear();
-
-            foreach (var articulo in articulos)
+            if (articulos != null)
             {
-                dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.categoria, articulo.descripcion, articulo.precioAlquiler, articulo.existencias);
+                foreach (var articulo in articulos)
+                {
+                    dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.descripcion, articulo.categoria, articulo.existencias, articulo.precioAlquiler);
+                }
             }
+            
 
 
         }
@@ -162,7 +165,7 @@ namespace Presentacion
                 if (buscado != null)
                 {
                     dataGridArtículos.Rows.Clear();
-                    dataGridArtículos.Rows.Add(buscado.idArticulo, buscado.categoria, buscado.descripcion, buscado.precioAlquiler, buscado.existencias);
+                    dataGridArtículos.Rows.Add(buscado.idArticulo, buscado.descripcion, buscado.categoria, buscado.precioAlquiler, buscado.existencias);
                 }
                 else
                 {

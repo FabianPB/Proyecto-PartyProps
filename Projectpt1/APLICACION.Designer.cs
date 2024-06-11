@@ -34,8 +34,6 @@
             btnServicios = new System.Windows.Forms.Button();
             btnInicio = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
-            panel3 = new System.Windows.Forms.Panel();
-            btnReservar = new System.Windows.Forms.Button();
             panel2 = new System.Windows.Forms.Panel();
             btnAgendar = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
@@ -119,8 +117,6 @@
             MenuVertical.Controls.Add(btnServicios);
             MenuVertical.Controls.Add(btnInicio);
             MenuVertical.Controls.Add(pictureBox1);
-            MenuVertical.Controls.Add(panel3);
-            MenuVertical.Controls.Add(btnReservar);
             MenuVertical.Controls.Add(panel2);
             MenuVertical.Controls.Add(label1);
             MenuVertical.Controls.Add(btnAgendar);
@@ -135,7 +131,7 @@
             // panel8
             // 
             panel8.BackColor = System.Drawing.Color.Crimson;
-            panel8.Location = new System.Drawing.Point(1, 339);
+            panel8.Location = new System.Drawing.Point(1, 364);
             panel8.Name = "panel8";
             panel8.Size = new System.Drawing.Size(20, 44);
             panel8.TabIndex = 10;
@@ -152,7 +148,7 @@
             btnServicios.ForeColor = System.Drawing.Color.White;
             btnServicios.Image = (System.Drawing.Image)resources.GetObject("btnServicios.Image");
             btnServicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnServicios.Location = new System.Drawing.Point(26, 339);
+            btnServicios.Location = new System.Drawing.Point(26, 364);
             btnServicios.Name = "btnServicios";
             btnServicios.Size = new System.Drawing.Size(221, 44);
             btnServicios.TabIndex = 9;
@@ -185,38 +181,10 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
-            // panel3
-            // 
-            panel3.BackColor = System.Drawing.Color.Crimson;
-            panel3.Location = new System.Drawing.Point(1, 220);
-            panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(20, 44);
-            panel3.TabIndex = 6;
-            // 
-            // btnReservar
-            // 
-            btnReservar.BackColor = System.Drawing.Color.Black;
-            btnReservar.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnReservar.FlatAppearance.BorderSize = 0;
-            btnReservar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            btnReservar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnReservar.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            btnReservar.ForeColor = System.Drawing.Color.White;
-            btnReservar.Image = (System.Drawing.Image)resources.GetObject("btnReservar.Image");
-            btnReservar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnReservar.Location = new System.Drawing.Point(26, 220);
-            btnReservar.Name = "btnReservar";
-            btnReservar.Size = new System.Drawing.Size(221, 44);
-            btnReservar.TabIndex = 5;
-            btnReservar.Text = "RESERVAR";
-            btnReservar.UseVisualStyleBackColor = false;
-            btnReservar.Click += btnReservar_Click;
-            // 
             // panel2
             // 
             panel2.BackColor = System.Drawing.Color.Crimson;
-            panel2.Location = new System.Drawing.Point(1, 280);
+            panel2.Location = new System.Drawing.Point(1, 270);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(20, 44);
             panel2.TabIndex = 4;
@@ -233,7 +201,7 @@
             btnAgendar.ForeColor = System.Drawing.Color.White;
             btnAgendar.Image = (System.Drawing.Image)resources.GetObject("btnAgendar.Image");
             btnAgendar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnAgendar.Location = new System.Drawing.Point(26, 280);
+            btnAgendar.Location = new System.Drawing.Point(26, 270);
             btnAgendar.Name = "btnAgendar";
             btnAgendar.Size = new System.Drawing.Size(221, 44);
             btnAgendar.TabIndex = 3;
@@ -776,8 +744,6 @@
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnReservar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Label label1;

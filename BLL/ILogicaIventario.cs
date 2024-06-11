@@ -12,9 +12,6 @@ namespace BLL
     public interface ILogicaIventario
     {
 
-
-
-
         public void Registrar(Articulo articulo);
         
         public Articulo Buscar(string idArticulo);

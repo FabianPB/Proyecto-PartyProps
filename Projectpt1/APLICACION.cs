@@ -54,10 +54,7 @@ namespace Presentacion
             AbrirFormHija(new AGENDAR());
         }
 
-        private void btnReservar_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new RESERVAR());
-        }
+       
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
