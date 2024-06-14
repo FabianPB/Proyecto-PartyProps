@@ -54,16 +54,27 @@
             label3 = new System.Windows.Forms.Label();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             label2 = new System.Windows.Forms.Label();
-            panel9 = new System.Windows.Forms.Panel();
-            label1 = new System.Windows.Forms.Label();
+            panelInicio = new System.Windows.Forms.Panel();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel9.SuspendLayout();
+            panelInicio.SuspendLayout();
             SuspendLayout();
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
+            label20.Font = new System.Drawing.Font("Showcard Gothic", 25.8000011F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label20.ForeColor = System.Drawing.Color.Black;
+            label20.Location = new System.Drawing.Point(374, 74);
+            label20.Name = "label20";
+            label20.Size = new System.Drawing.Size(310, 54);
+            label20.TabIndex = 9;
+            label20.Text = "PARTYPROpS";
             // 
             // panel7
             // 
@@ -75,7 +86,7 @@
             panel7.Controls.Add(label18);
             panel7.Controls.Add(pictureBox8);
             panel7.Controls.Add(label19);
-            panel7.Location = new System.Drawing.Point(693, 198);
+            panel7.Location = new System.Drawing.Point(688, 174);
             panel7.Name = "panel7";
             panel7.Size = new System.Drawing.Size(265, 459);
             panel7.TabIndex = 8;
@@ -165,7 +176,7 @@
             panel6.Controls.Add(label12);
             panel6.Controls.Add(pictureBox7);
             panel6.Controls.Add(label13);
-            panel6.Location = new System.Drawing.Point(379, 198);
+            panel6.Location = new System.Drawing.Point(374, 174);
             panel6.Name = "panel6";
             panel6.Size = new System.Drawing.Size(265, 459);
             panel6.TabIndex = 7;
@@ -265,7 +276,7 @@
             panel4.Controls.Add(label3);
             panel4.Controls.Add(pictureBox2);
             panel4.Controls.Add(label2);
-            panel4.Location = new System.Drawing.Point(55, 198);
+            panel4.Location = new System.Drawing.Point(50, 174);
             panel4.Name = "panel4";
             panel4.Size = new System.Drawing.Size(265, 459);
             panel4.TabIndex = 6;
@@ -344,26 +355,17 @@
             label2.TabIndex = 1;
             label2.Text = "Eventos";
             // 
-            // panel9
+            // panelInicio
             // 
-            panel9.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
-            panel9.Controls.Add(label1);
-            panel9.Location = new System.Drawing.Point(55, 75);
-            panel9.Name = "panel9";
-            panel9.Size = new System.Drawing.Size(903, 63);
-            panel9.TabIndex = 15;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
-            label1.Font = new System.Drawing.Font("Showcard Gothic", 25.8000011F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label1.ForeColor = System.Drawing.Color.Black;
-            label1.Location = new System.Drawing.Point(307, 9);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(310, 54);
-            label1.TabIndex = 5;
-            label1.Text = "PARTYPROpS";
+            panelInicio.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
+            panelInicio.Controls.Add(panel4);
+            panelInicio.Controls.Add(label20);
+            panelInicio.Controls.Add(panel6);
+            panelInicio.Controls.Add(panel7);
+            panelInicio.Location = new System.Drawing.Point(0, 0);
+            panelInicio.Name = "panelInicio";
+            panelInicio.Size = new System.Drawing.Size(1013, 788);
+            panelInicio.TabIndex = 7;
             // 
             // Inicio
             // 
@@ -371,10 +373,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
             ClientSize = new System.Drawing.Size(1013, 788);
-            Controls.Add(panel9);
-            Controls.Add(panel7);
-            Controls.Add(panel6);
-            Controls.Add(panel4);
+            Controls.Add(panelInicio);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "Inicio";
             Text = "INICIO";
@@ -388,8 +387,8 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel9.ResumeLayout(false);
-            panel9.PerformLayout();
+            panelInicio.ResumeLayout(false);
+            panelInicio.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -419,7 +418,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelInicio;
     }
 }

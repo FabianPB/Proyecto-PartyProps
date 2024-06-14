@@ -87,7 +87,7 @@
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label1.ForeColor = System.Drawing.Color.Black;
-            label1.Location = new System.Drawing.Point(60, 288);
+            label1.Location = new System.Drawing.Point(67, 399);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(160, 21);
             label1.TabIndex = 5;
@@ -98,7 +98,7 @@
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label3.ForeColor = System.Drawing.Color.Black;
-            label3.Location = new System.Drawing.Point(45, 467);
+            label3.Location = new System.Drawing.Point(49, 482);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(194, 21);
             label3.TabIndex = 6;
@@ -125,7 +125,7 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label4.ForeColor = System.Drawing.Color.Black;
-            label4.Location = new System.Drawing.Point(77, 132);
+            label4.Location = new System.Drawing.Point(81, 147);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(108, 21);
             label4.TabIndex = 9;
@@ -139,7 +139,7 @@
             btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            btnRegistrar.Location = new System.Drawing.Point(616, 607);
+            btnRegistrar.Location = new System.Drawing.Point(620, 622);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new System.Drawing.Size(127, 49);
             btnRegistrar.TabIndex = 12;
@@ -149,24 +149,25 @@
             // 
             // btnLimpiar
             // 
-            button2.BackColor = System.Drawing.Color.FromArgb(255, 128, 128);
-            button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button2.ForeColor = System.Drawing.Color.Black;
-            button2.Location = new System.Drawing.Point(482, 607);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(127, 49);
-            button2.TabIndex = 13;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = false;
+            btnLimpiar.BackColor = System.Drawing.Color.FromArgb(255, 128, 128);
+            btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnLimpiar.FlatAppearance.BorderSize = 0;
+            btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnLimpiar.ForeColor = System.Drawing.Color.Black;
+            btnLimpiar.Location = new System.Drawing.Point(486, 622);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new System.Drawing.Size(127, 49);
+            btnLimpiar.TabIndex = 13;
+            btnLimpiar.Text = "Cancelar";
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label6.Location = new System.Drawing.Point(499, 107);
+            label6.Location = new System.Drawing.Point(503, 122);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(210, 27);
             label6.TabIndex = 14;
@@ -193,7 +194,7 @@
             dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComCategoria, ComDescripcion, ComPrecio, ComExistencias, colSubtotal, btnEliminar });
             dataGridArtículos.EnableHeadersVisualStyles = false;
             dataGridArtículos.GridColor = System.Drawing.Color.Black;
-            dataGridArtículos.Location = new System.Drawing.Point(265, 196);
+            dataGridArtículos.Location = new System.Drawing.Point(281, 224);
             dataGridArtículos.Name = "dataGridArtículos";
             dataGridArtículos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -269,7 +270,7 @@
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
             panel1.Controls.Add(label5);
-            panel1.Location = new System.Drawing.Point(45, 12);
+            panel1.Location = new System.Drawing.Point(49, 27);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(919, 63);
             panel1.TabIndex = 16;
@@ -291,7 +292,7 @@
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label2.ForeColor = System.Drawing.Color.Black;
-            label2.Location = new System.Drawing.Point(63, 285);
+            label2.Location = new System.Drawing.Point(67, 314);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(151, 21);
             label2.TabIndex = 18;
@@ -300,7 +301,7 @@
             // txtNombreCliente
             // 
             txtNombreCliente.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtNombreCliente.Location = new System.Drawing.Point(45, 313);
+            txtNombreCliente.Location = new System.Drawing.Point(49, 342);
             txtNombreCliente.Name = "txtNombreCliente";
             txtNombreCliente.Size = new System.Drawing.Size(185, 27);
             txtNombreCliente.TabIndex = 17;
@@ -309,7 +310,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label8.Location = new System.Drawing.Point(265, 156);
+            label8.Location = new System.Drawing.Point(269, 171);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(95, 23);
             label8.TabIndex = 20;
@@ -379,7 +380,7 @@
             // 
             panel2.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
             panel2.Controls.Add(label11);
-            panel2.Location = new System.Drawing.Point(45, 549);
+            panel2.Location = new System.Drawing.Point(49, 564);
             panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(185, 152);
@@ -400,7 +401,7 @@
             label12.AutoSize = true;
             label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label12.ForeColor = System.Drawing.Color.Black;
-            label12.Location = new System.Drawing.Point(84, 209);
+            label12.Location = new System.Drawing.Point(88, 224);
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(82, 21);
             label12.TabIndex = 29;
@@ -472,7 +473,6 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "AGENDAR";
             Text = "RESERVAS";
-            Load += AGENDAR_Load;
             Resize += AGENDAR_Resize;
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).EndInit();
             panel1.ResumeLayout(false);

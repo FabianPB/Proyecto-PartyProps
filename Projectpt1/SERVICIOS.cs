@@ -84,22 +84,63 @@ namespace Projectpt1
             CentrarFormulario();
         }
 
-        private void SERVICIOS_Resize(object sender, EventArgs e)
+        private void CentrarFormulario()
         {
-            CenterControls();
-        }
+            
+            Panel panelContent = this.panelServicios; 
 
-        private void CenterControls()
-        {
-
-            Panel panelContent = this.panelServicios;
-
-            // Calcula la posición para centrar el panel
+            
             int x = (this.ClientSize.Width - panelContent.Width) / 2;
             int y = (this.ClientSize.Height - panelContent.Height) / 6;
 
-
+            
             panelContent.Location = new Point(x, y);
         }
+
+        private void LlenarComboBoxFechas()
+        {
+            HashSet<DateTime> fechas = new HashSet<DateTime>();
+
+            foreach (DataGridViewRow row in dataGridArtículos.Rows)
+            {
+                if (row.Cells["ComFechaEntrega"].Value != null)
+                {
+                    DateTime fecha = Convert.ToDateTime(row.Cells["ComFechaEntrega"].Value);
+                    fechas.Add(fecha.Date);
+                }
+            }
+
+            cmbFechas.Items.Clear();
+            foreach (DateTime fecha in fechas)
+            {
+                cmbFechas.Items.Add(fecha.ToShortDateString());
+            }
+        }
+
+        private void cmbFechas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbFechas.SelectedItem != null)
+            {
+                DateTime fechaSeleccionada;
+                if (DateTime.TryParse(cmbFechas.SelectedItem.ToString(), out fechaSeleccionada))
+                {
+                    FiltrarFacturasPorFecha(fechaSeleccionada);
+                }
+            }
+        }
+
+        private void FiltrarFacturasPorFecha(DateTime fecha)
+        {
+            dataGridArtículos.Rows.Clear();
+
+            var facturasFiltradas = agendar.BuscarPorFecha(fecha);
+            foreach (var factura in facturasFiltradas)
+            {
+                dataGridArtículos.Rows.Add(factura.idFactura, factura.CedulaCliente, factura.NombreCliente, factura.fechaFacturacion, factura.fechaDevolucion, factura.montoPago);
+            }
+        }
+
+
+
     }
 }

@@ -127,6 +127,15 @@ namespace Presentacion
             {
                 e.Handled = true;
             }
+
+        }
+
+        private void Txt_Id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
@@ -250,24 +259,6 @@ namespace Presentacion
             int y = (this.ClientSize.Height - panelContent.Height) / 6;
 
             
-            panelContent.Location = new Point(x, y);
-        }
-
-        private void Articulos_Resize(object sender, EventArgs e)
-        {
-            CenterControls();
-        }
-
-        private void CenterControls()
-        {
-
-            Panel panelContent = this.panelArticulos;
-
-            // Calcula la posición para centrar el panel
-            int x = (this.ClientSize.Width - panelContent.Width) / 2;
-            int y = (this.ClientSize.Height - panelContent.Height) / 6;
-
-
             panelContent.Location = new Point(x, y);
         }
     }

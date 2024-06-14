@@ -59,7 +59,7 @@
             panelArtículos = new System.Windows.Forms.Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).BeginInit();
-            panelArticulos.SuspendLayout();
+            panelArtículos.SuspendLayout();
             SuspendLayout();
             // 
             // Txt_Id
@@ -75,7 +75,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(83, 125);
+            label1.Location = new System.Drawing.Point(106, 136);
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(33, 21);
@@ -175,7 +175,7 @@
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
             panel1.Controls.Add(label2);
-            panel1.Location = new System.Drawing.Point(29, 28);
+            panel1.Location = new System.Drawing.Point(52, 39);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(925, 63);
             panel1.TabIndex = 13;
@@ -201,7 +201,7 @@
             dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComDescripcion, ComCategoria, ComPrecio, ComExistencias, btnActualizar, btnEliminar });
             dataGridArtículos.EnableHeadersVisualStyles = false;
             dataGridArtículos.GridColor = System.Drawing.Color.Black;
-            dataGridArtículos.Location = new System.Drawing.Point(219, 252);
+            dataGridArtículos.Location = new System.Drawing.Point(312, 273);
             dataGridArtículos.Name = "dataGridArtículos";
             dataGridArtículos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -219,7 +219,7 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridArtículos.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            dataGridArtículos.Size = new System.Drawing.Size(776, 329);
+            dataGridArtículos.Size = new System.Drawing.Size(774, 383);
             dataGridArtículos.TabIndex = 14;
             dataGridArtículos.CellClick += dataGridArtículos_CellClick;
             dataGridArtículos.CellContentClick += dataGridArtículos_CellContentClick;
@@ -275,6 +275,81 @@
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Width = 25;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label7.Location = new System.Drawing.Point(82, 225);
+            label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(106, 21);
+            label7.TabIndex = 15;
+            label7.Text = "Categoría :";
+            // 
+            // cbCategoria
+            // 
+            cbCategoria.FormattingEnabled = true;
+            cbCategoria.Location = new System.Drawing.Point(52, 255);
+            cbCategoria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cbCategoria.Name = "cbCategoria";
+            cbCategoria.Size = new System.Drawing.Size(170, 28);
+            cbCategoria.TabIndex = 16;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtBuscar.Location = new System.Drawing.Point(474, 200);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new System.Drawing.Size(188, 27);
+            txtBuscar.TabIndex = 17;
+            txtBuscar.KeyDown += textBox1_KeyDown;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            label8.Location = new System.Drawing.Point(335, 204);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(133, 23);
+            label8.TabIndex = 18;
+            label8.Text = "Buscar Artículo :";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label9.ForeColor = System.Drawing.Color.Black;
+            label9.Location = new System.Drawing.Point(543, 233);
+            label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(208, 28);
+            label9.TabIndex = 19;
+            label9.Text = "Lista de Artículos";
+            // 
+            // panelArtículos
+            // 
+            panelArtículos.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
+            panelArtículos.Controls.Add(panel1);
+            panelArtículos.Controls.Add(label9);
+            panelArtículos.Controls.Add(Txt_Id);
+            panelArtículos.Controls.Add(label8);
+            panelArtículos.Controls.Add(label1);
+            panelArtículos.Controls.Add(txtBuscar);
+            panelArtículos.Controls.Add(label4);
+            panelArtículos.Controls.Add(cbCategoria);
+            panelArtículos.Controls.Add(txtDescripcion);
+            panelArtículos.Controls.Add(label7);
+            panelArtículos.Controls.Add(label5);
+            panelArtículos.Controls.Add(dataGridArtículos);
+            panelArtículos.Controls.Add(txtPrecio);
+            panelArtículos.Controls.Add(label6);
+            panelArtículos.Controls.Add(btnRegistrar);
+            panelArtículos.Controls.Add(txtCantidad);
+            panelArtículos.Location = new System.Drawing.Point(1, 1);
+            panelArtículos.Name = "panelArtículos";
+            panelArtículos.Size = new System.Drawing.Size(995, 671);
+            panelArtículos.TabIndex = 14;
+            // 
             // Articulos
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -290,8 +365,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).EndInit();
-            panelArticulos.ResumeLayout(false);
-            panelArticulos.PerformLayout();
+            panelArtículos.ResumeLayout(false);
+            panelArtículos.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -321,6 +396,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ComExistencias;
         private System.Windows.Forms.DataGridViewImageColumn btnActualizar;
         private System.Windows.Forms.DataGridViewImageColumn btnEliminar;
-        private System.Windows.Forms.Panel panelArticulos;
+        private System.Windows.Forms.Panel panelArtículos;
     }
 }
