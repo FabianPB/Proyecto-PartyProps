@@ -55,6 +55,8 @@
             pictureBox2 = new System.Windows.Forms.PictureBox();
             label2 = new System.Windows.Forms.Label();
             panelInicio = new System.Windows.Forms.Panel();
+            panel9 = new System.Windows.Forms.Panel();
+            label20 = new System.Windows.Forms.Label();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel6.SuspendLayout();
@@ -62,11 +64,8 @@
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelInicio.SuspendLayout();
+            panel9.SuspendLayout();
             SuspendLayout();
-            // 
-            // label20
-            // 
-            
             // 
             // panel7
             // 
@@ -350,6 +349,7 @@
             // panelInicio
             // 
             panelInicio.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
+            panelInicio.Controls.Add(panel9);
             panelInicio.Controls.Add(panel4);
             panelInicio.Controls.Add(panel6);
             panelInicio.Controls.Add(panel7);
@@ -357,6 +357,27 @@
             panelInicio.Name = "panelInicio";
             panelInicio.Size = new System.Drawing.Size(1013, 788);
             panelInicio.TabIndex = 7;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
+            panel9.Controls.Add(label20);
+            panel9.Location = new System.Drawing.Point(50, 50);
+            panel9.Name = "panel9";
+            panel9.Size = new System.Drawing.Size(903, 63);
+            panel9.TabIndex = 15;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
+            label20.Font = new System.Drawing.Font("Showcard Gothic", 25.8000011F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            label20.ForeColor = System.Drawing.Color.Black;
+            label20.Location = new System.Drawing.Point(307, 9);
+            label20.Name = "label20";
+            label20.Size = new System.Drawing.Size(310, 54);
+            label20.TabIndex = 5;
+            label20.Text = "PARTYPROpS";
             // 
             // Inicio
             // 
@@ -379,7 +400,8 @@
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelInicio.ResumeLayout(false);
-            panelInicio.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -410,5 +432,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelInicio;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label20;
     }
 }
