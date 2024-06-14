@@ -51,5 +51,23 @@ namespace Projectpt1
                 ventana.Show();
             }
         }
+
+        private void SERVICIOS_Resize(object sender, EventArgs e)
+        {
+            CenterControls();
+        }
+
+        private void CenterControls()
+        {
+
+            Panel panelContent = this.panelServicios;
+
+            // Calcula la posición para centrar el panel
+            int x = (this.ClientSize.Width - panelContent.Width) / 2;
+            int y = (this.ClientSize.Height - panelContent.Height) / 6;
+
+
+            panelContent.Location = new Point(x, y);
+        }
     }
 }

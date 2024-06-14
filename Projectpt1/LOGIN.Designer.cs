@@ -46,22 +46,22 @@
             // 
             // panel1
             // 
-            panel1.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
+            panel1.BackColor = System.Drawing.Color.Black;
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = System.Windows.Forms.DockStyle.Left;
             panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(381, 494);
+            panel1.Size = new System.Drawing.Size(435, 659);
             panel1.TabIndex = 0;
             panel1.MouseDown += panel1_MouseDown;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new System.Drawing.Point(40, 86);
-            pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            pictureBox1.Location = new System.Drawing.Point(46, 115);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(298, 284);
+            pictureBox1.Size = new System.Drawing.Size(341, 379);
             pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -73,9 +73,10 @@
             txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtUsuario.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             txtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            txtUsuario.Location = new System.Drawing.Point(556, 274);
+            txtUsuario.Location = new System.Drawing.Point(635, 365);
+            txtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new System.Drawing.Size(301, 18);
+            txtUsuario.Size = new System.Drawing.Size(344, 23);
             txtUsuario.TabIndex = 1;
             txtUsuario.Text = "USUARIO";
             txtUsuario.Enter += txtUsuario_Enter;
@@ -88,9 +89,10 @@
             txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             txtContraseña.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             txtContraseña.ForeColor = System.Drawing.Color.DimGray;
-            txtContraseña.Location = new System.Drawing.Point(556, 308);
+            txtContraseña.Location = new System.Drawing.Point(635, 411);
+            txtContraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new System.Drawing.Size(301, 18);
+            txtContraseña.Size = new System.Drawing.Size(344, 23);
             txtContraseña.TabIndex = 2;
             txtContraseña.Text = "CONTRASEÑA";
             txtContraseña.Enter += txtContraseña_Enter;
@@ -106,9 +108,10 @@
             btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             btnLogin.ForeColor = System.Drawing.Color.White;
-            btnLogin.Location = new System.Drawing.Point(556, 364);
+            btnLogin.Location = new System.Drawing.Point(635, 485);
+            btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new System.Drawing.Size(301, 48);
+            btnLogin.Size = new System.Drawing.Size(344, 64);
             btnLogin.TabIndex = 0;
             btnLogin.Text = "ENTRAR";
             btnLogin.UseVisualStyleBackColor = false;
@@ -120,9 +123,10 @@
             btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             btnCerrar.Image = (System.Drawing.Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new System.Drawing.Point(997, 11);
+            btnCerrar.Location = new System.Drawing.Point(1139, 15);
+            btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new System.Drawing.Size(24, 22);
+            btnCerrar.Size = new System.Drawing.Size(27, 29);
             btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             btnCerrar.TabIndex = 5;
             btnCerrar.TabStop = false;
@@ -133,9 +137,10 @@
             btnMinimizar.BackColor = System.Drawing.Color.White;
             btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             btnMinimizar.Image = (System.Drawing.Image)resources.GetObject("btnMinimizar.Image");
-            btnMinimizar.Location = new System.Drawing.Point(967, 11);
+            btnMinimizar.Location = new System.Drawing.Point(1105, 15);
+            btnMinimizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnMinimizar.Name = "btnMinimizar";
-            btnMinimizar.Size = new System.Drawing.Size(24, 22);
+            btnMinimizar.Size = new System.Drawing.Size(27, 29);
             btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             btnMinimizar.TabIndex = 6;
             btnMinimizar.TabStop = false;
@@ -144,10 +149,9 @@
             // logo
             // 
             logo.Image = (System.Drawing.Image)resources.GetObject("logo.Image");
-            logo.Location = new System.Drawing.Point(600, 46);
-            logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            logo.Location = new System.Drawing.Point(686, 61);
             logo.Name = "logo";
-            logo.Size = new System.Drawing.Size(213, 210);
+            logo.Size = new System.Drawing.Size(243, 280);
             logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             logo.TabIndex = 7;
             logo.TabStop = false;
@@ -156,10 +160,10 @@
             // LOGIN
             // 
             AcceptButton = btnLogin;
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.White;
-            ClientSize = new System.Drawing.Size(1032, 494);
+            ClientSize = new System.Drawing.Size(1179, 659);
             Controls.Add(logo);
             Controls.Add(btnMinimizar);
             Controls.Add(btnCerrar);
@@ -168,6 +172,7 @@
             Controls.Add(txtUsuario);
             Controls.Add(panel1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "LOGIN";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Form1";

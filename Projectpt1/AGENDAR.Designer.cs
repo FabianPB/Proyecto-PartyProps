@@ -70,6 +70,7 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnAgregar).BeginInit();
             panel2.SuspendLayout();
+            panelAgendar.SuspendLayout();
             SuspendLayout();
             // 
             // fecha1
@@ -86,9 +87,9 @@
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label1.ForeColor = System.Drawing.Color.Black;
-            label1.Location = new System.Drawing.Point(60, 288);
+            label1.Location = new System.Drawing.Point(63, 384);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(134, 19);
+            label1.Size = new System.Drawing.Size(160, 21);
             label1.TabIndex = 5;
             label1.Text = "Fecha de Alquiler:";
             // 
@@ -97,9 +98,9 @@
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label3.ForeColor = System.Drawing.Color.Black;
-            label3.Location = new System.Drawing.Point(45, 350);
+            label3.Location = new System.Drawing.Point(45, 467);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(162, 19);
+            label3.Size = new System.Drawing.Size(194, 21);
             label3.TabIndex = 6;
             label3.Text = "Fecha de Devolución:";
             // 
@@ -126,9 +127,9 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label4.ForeColor = System.Drawing.Color.Black;
-            label4.Location = new System.Drawing.Point(73, 99);
+            label4.Location = new System.Drawing.Point(77, 132);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(88, 19);
+            label4.Size = new System.Drawing.Size(108, 21);
             label4.TabIndex = 9;
             label4.Text = "ID Factura :";
             // 
@@ -140,10 +141,9 @@
             btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            btnRegistrar.Location = new System.Drawing.Point(544, 455);
-            btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btnRegistrar.Location = new System.Drawing.Point(616, 607);
             btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new System.Drawing.Size(111, 37);
+            btnRegistrar.Size = new System.Drawing.Size(127, 49);
             btnRegistrar.TabIndex = 12;
             btnRegistrar.Text = "Agendar";
             btnRegistrar.UseVisualStyleBackColor = false;
@@ -157,10 +157,9 @@
             button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             button2.ForeColor = System.Drawing.Color.Black;
-            button2.Location = new System.Drawing.Point(427, 455);
-            button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            button2.Location = new System.Drawing.Point(482, 607);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(111, 37);
+            button2.Size = new System.Drawing.Size(127, 49);
             button2.TabIndex = 13;
             button2.Text = "Cancelar";
             button2.UseVisualStyleBackColor = false;
@@ -169,9 +168,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label6.Location = new System.Drawing.Point(442, 80);
+            label6.Location = new System.Drawing.Point(499, 107);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(173, 23);
+            label6.Size = new System.Drawing.Size(210, 27);
             label6.TabIndex = 14;
             label6.Text = "Reservar Artículos";
             // 
@@ -196,8 +195,7 @@
             dataGridArtículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ComId, ComCategoria, ComDescripcion, ComPrecio, ComExistencias, colSubtotal, btnEliminar });
             dataGridArtículos.EnableHeadersVisualStyles = false;
             dataGridArtículos.GridColor = System.Drawing.Color.Black;
-            dataGridArtículos.Location = new System.Drawing.Point(237, 147);
-            dataGridArtículos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dataGridArtículos.Location = new System.Drawing.Point(265, 196);
             dataGridArtículos.Name = "dataGridArtículos";
             dataGridArtículos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -224,34 +222,35 @@
             ComId.HeaderText = "Id";
             ComId.MinimumWidth = 6;
             ComId.Name = "ComId";
-            ComId.Width = 45;
+            ComId.Width = 53;
             // 
             // ComCategoria
             // 
             ComCategoria.HeaderText = "Categoría";
+            ComCategoria.MinimumWidth = 6;
             ComCategoria.Name = "ComCategoria";
-            ComCategoria.Width = 92;
+            ComCategoria.Width = 112;
             // 
             // ComDescripcion
             // 
             ComDescripcion.HeaderText = "Descripcion";
             ComDescripcion.MinimumWidth = 6;
             ComDescripcion.Name = "ComDescripcion";
-            ComDescripcion.Width = 103;
+            ComDescripcion.Width = 126;
             // 
             // ComPrecio
             // 
             ComPrecio.HeaderText = "Precio";
             ComPrecio.MinimumWidth = 6;
             ComPrecio.Name = "ComPrecio";
-            ComPrecio.Width = 70;
+            ComPrecio.Width = 85;
             // 
             // ComExistencias
             // 
             ComExistencias.HeaderText = "Existencias";
             ComExistencias.MinimumWidth = 6;
             ComExistencias.Name = "ComExistencias";
-            ComExistencias.Width = 97;
+            ComExistencias.Width = 119;
             // 
             // colSubtotal
             // 
@@ -269,10 +268,9 @@
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
             panel1.Controls.Add(label5);
-            panel1.Location = new System.Drawing.Point(45, 9);
-            panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            panel1.Location = new System.Drawing.Point(45, 12);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(804, 47);
+            panel1.Size = new System.Drawing.Size(919, 63);
             panel1.TabIndex = 16;
             // 
             // label5
@@ -280,10 +278,10 @@
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label5.ForeColor = System.Drawing.Color.Black;
-            label5.Location = new System.Drawing.Point(19, 9);
+            label5.Location = new System.Drawing.Point(22, 12);
             label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(237, 32);
+            label5.Size = new System.Drawing.Size(289, 39);
             label5.TabIndex = 2;
             label5.Text = "Agendar Pedido.";
             // 
@@ -292,28 +290,27 @@
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label2.ForeColor = System.Drawing.Color.Black;
-            label2.Location = new System.Drawing.Point(60, 214);
+            label2.Location = new System.Drawing.Point(63, 285);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(125, 19);
+            label2.Size = new System.Drawing.Size(151, 21);
             label2.TabIndex = 18;
             label2.Text = "Nombre Cliente :";
             // 
             // txtNombreCliente
             // 
             txtNombreCliente.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtNombreCliente.Location = new System.Drawing.Point(45, 235);
-            txtNombreCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtNombreCliente.Location = new System.Drawing.Point(45, 313);
             txtNombreCliente.Name = "txtNombreCliente";
-            txtNombreCliente.Size = new System.Drawing.Size(162, 23);
+            txtNombreCliente.Size = new System.Drawing.Size(185, 27);
             txtNombreCliente.TabIndex = 17;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label8.Location = new System.Drawing.Point(237, 117);
+            label8.Location = new System.Drawing.Point(265, 156);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(77, 19);
+            label8.Size = new System.Drawing.Size(95, 23);
             label8.TabIndex = 20;
             label8.Text = "ID Artículo:";
             // 
@@ -345,7 +342,7 @@
             label7.Font = new System.Drawing.Font("Segoe UI", 10F);
             label7.Location = new System.Drawing.Point(384, 116);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(63, 19);
+            label7.Size = new System.Drawing.Size(78, 23);
             label7.TabIndex = 23;
             label7.Text = "Artículo :";
             // 
@@ -355,7 +352,7 @@
             label9.Font = new System.Drawing.Font("Segoe UI", 10F);
             label9.Location = new System.Drawing.Point(719, 120);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(67, 19);
+            label9.Size = new System.Drawing.Size(83, 23);
             label9.TabIndex = 24;
             label9.Text = "Cantidad:";
             // 
@@ -374,7 +371,7 @@
             label10.Font = new System.Drawing.Font("Segoe UI", 10F);
             label10.Location = new System.Drawing.Point(502, 117);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(75, 19);
+            label10.Size = new System.Drawing.Size(93, 23);
             label10.TabIndex = 27;
             label10.Text = "Valor C/U :";
             // 
@@ -382,18 +379,19 @@
             // 
             panel2.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
             panel2.Controls.Add(label11);
-            panel2.Location = new System.Drawing.Point(45, 412);
+            panel2.Location = new System.Drawing.Point(45, 549);
+            panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(162, 114);
+            panel2.Size = new System.Drawing.Size(185, 152);
             panel2.TabIndex = 28;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label11.Location = new System.Drawing.Point(28, 19);
+            label11.Location = new System.Drawing.Point(32, 25);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(112, 23);
+            label11.Size = new System.Drawing.Size(134, 27);
             label11.TabIndex = 29;
             label11.Text = "Saldo Total";
             // 
@@ -402,9 +400,9 @@
             label12.AutoSize = true;
             label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label12.ForeColor = System.Drawing.Color.Black;
-            label12.Location = new System.Drawing.Point(79, 157);
+            label12.Location = new System.Drawing.Point(84, 209);
             label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(69, 19);
+            label12.Size = new System.Drawing.Size(82, 21);
             label12.TabIndex = 29;
             label12.Text = "Cedula :";
             // 
@@ -435,7 +433,7 @@
             // 
             // AGENDAR
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
             ClientSize = new System.Drawing.Size(890, 538);
@@ -465,17 +463,19 @@
             Controls.Add(label1);
             Controls.Add(fecha1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "AGENDAR";
             Text = "RESERVAS";
+            Load += AGENDAR_Load;
+            Resize += AGENDAR_Resize;
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnAgregar).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panelAgendar.ResumeLayout(false);
+            panelAgendar.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
