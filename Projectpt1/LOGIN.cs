@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace Presentacion 
+namespace Presentacion
 {
     public partial class LOGIN : Form
     {
@@ -18,6 +18,10 @@ namespace Presentacion
             InitializeComponent();
             txtUsuario.KeyPress += new KeyPressEventHandler(CheckEnterKeyPress);
             txtContraseña.KeyPress += new KeyPressEventHandler(CheckEnterKeyPress);
+
+            // Añadir eventos para convertir texto a mayúsculas
+            txtUsuario.TextChanged += new EventHandler(ConvertToUpper);
+            txtContraseña.TextChanged += new EventHandler(ConvertToUpper);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -93,11 +97,25 @@ namespace Presentacion
                 btnLogin.PerformClick();
             }
         }
+
+        private void ConvertToUpper(object sender, EventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            int selectionStart = textBox.SelectionStart;
+            int selectionLength = textBox.SelectionLength;
+
+            textBox.Text = textBox.Text.ToUpper();
+            textBox.SelectionStart = selectionStart;
+            textBox.SelectionLength = selectionLength;
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "ADMIN" && txtContraseña.Text == "ADMIN")
-            {
+            string usuario = txtUsuario.Text.ToUpper();
+            string contraseña = txtContraseña.Text.ToUpper();
 
+            if (usuario == "ADMIN" && contraseña == "ADMIN")
+            {
                 Form formularioAplicacion = new APLICACION();
                 this.Hide();
                 formularioAplicacion.Show();
@@ -115,3 +133,4 @@ namespace Presentacion
         }
     }
 }
+

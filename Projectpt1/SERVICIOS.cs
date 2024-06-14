@@ -19,6 +19,7 @@ namespace Projectpt1
         {
             InitializeComponent();
             Cargartabla();
+            cmbFechas.SelectedIndexChanged += cmbFechas_SelectedIndexChanged;
         }
         public void Cargartabla()
         {
@@ -32,6 +33,7 @@ namespace Projectpt1
                     dataGridArtículos.Rows.Add(item.idFactura, item.CedulaCliente, item.NombreCliente, item.fechaFacturacion, item.fechaDevolucion, item.montoPago);
                 }
             }
+            LlenarComboBoxFechas();
         }
 
 
@@ -50,6 +52,36 @@ namespace Projectpt1
                 VistaDetalles ventana = new VistaDetalles(idFactura);
                 ventana.Show();
             }
+        }
+
+
+
+        private void txtBuscarFactura_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtBuscarFactura.Text.Length == 0)
+                {
+                    Cargartabla();
+                    return;
+                }
+                var buscado = agendar.Eliminar(txtBuscarFactura.Text);
+                if (buscado != null)
+                {
+                    dataGridArtículos.Rows.Clear();
+                    dataGridArtículos.Rows.Add(buscado.idFactura, buscado.CedulaCliente, buscado.NombreCliente, buscado.fechaFacturacion, buscado.fechaDevolucion, buscado.montoPago);
+                }
+                else
+                {
+                    MessageBox.Show("El articulo no existe", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+        }
+
+        private void SERVICIOS_Resize(object sender, EventArgs e)
+        {
+            CentrarFormulario();
         }
 
         private void SERVICIOS_Resize(object sender, EventArgs e)

@@ -14,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DAL;
 
 namespace Presentacion
 {
@@ -22,7 +23,8 @@ namespace Presentacion
         List<DetalleFactura> detalles = new List<DetalleFactura>();
         LogicaInventario inventario = new LogicaInventario();
         LogicaAgendar agendar = new LogicaAgendar();
-
+        RepositorioFactura repositorioFactura = new RepositorioFactura();   
+        
         public AGENDAR()
         {
             InitializeComponent();
@@ -58,7 +60,7 @@ namespace Presentacion
             }
             factura.CedulaCliente = txtCedula.Text;
 
-            
+
             if (DateTime.Compare(factura.fechaFacturacion, factura.fechaDevolucion) > 0)
             {
                 MessageBox.Show("Fecha devolución es menor a la fecha de alquiler", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -72,8 +74,10 @@ namespace Presentacion
                 MessageBox.Show("Registre artículos para facturar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            factura.detalles = detalles;
 
+
+            factura.detalles = detalles;
+           
             factura.CalcularMonto();
             agendar.Add(factura);
             MessageBox.Show("FACTURA REGISTRADA CON ÉXITO", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -88,10 +92,26 @@ namespace Presentacion
             txtIdArticulo.Clear();
             txtIdFactura.Clear();
             txtNombreCliente.Clear();
+            dataGridArtículos.Rows.Clear();
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(txtIdArticulo.Text))
+            {
+                MessageBox.Show("Campo IdArticulo vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCantidad.Text))
+            {
+                MessageBox.Show("Campo Cantidad vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             if (detalles.FirstOrDefault(p => p.articulo.idArticulo == txtIdArticulo.Text) == null)
             {
                 DetalleFactura detalle = new DetalleFactura();
@@ -193,6 +213,30 @@ namespace Presentacion
             {
                 e.Handled = true;
             }
+        }
+
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LIMPIAR();
+        }
+
+        private void AGENDAR_Resize(object sender, EventArgs e)
+        {
+            CentrarFormulario();
+        }
+
+        private void CentrarFormulario()
+        {
+            
+            Panel panelContent = this.panelAgendar; 
+
+            
+            int x = (this.ClientSize.Width - panelContent.Width) / 2;
+            int y = (this.ClientSize.Height - panelContent.Height) / 6;
+
+            
+            panelContent.Location = new Point(x, y);
         }
 
         private void AGENDAR_Resize(object sender, EventArgs e)

@@ -16,5 +16,23 @@ namespace Projectpt1
         {
             InitializeComponent();
         }
+
+        private void Inicio_Resize(object sender, EventArgs e)
+        {
+            CentrarFormulario();
+        }
+
+        private void CentrarFormulario()
+        {
+            
+            Panel panelContent = this.panelInicio; 
+
+            
+            int x = (this.ClientSize.Width - panelContent.Width) / 2;
+            int y = (this.ClientSize.Height - panelContent.Height) / 6;
+
+            
+            panelContent.Location = new Point(x, y);
+        }
     }
 }

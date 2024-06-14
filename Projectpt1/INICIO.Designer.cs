@@ -378,6 +378,7 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "Inicio";
             Text = "INICIO";
+            Resize += Inicio_Resize;
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();

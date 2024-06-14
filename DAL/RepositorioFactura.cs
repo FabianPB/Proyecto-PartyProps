@@ -9,21 +9,21 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace DAL
 {
-    public class RepositorioFactura:servicioSQL
+    public class RepositorioFactura : servicioSQL
     {
         RepositorioInventario repositorioInventario = new RepositorioInventario();
         public void AddFactura(Factura factura)
         {
-   
-           string query= "INSERT INTO FACTURA " +
-                          "(IdFactura, CedulaCliente, NombreCliente, MontoPago, FechaAlquiler, FechaDevolucion) VALUES " +
-                             "(@IdFactura, @CedulaCliente, @NombreCliente, @MontoPago, @FechaAlquiler, @FechaDevolucion)";
+
+            string query = "INSERT INTO FACTURA " +
+                           "(IdFactura, CedulaCliente, NombreCliente, MontoPago, FechaAlquiler, FechaDevolucion) VALUES " +
+                              "(@IdFactura, @CedulaCliente, @NombreCliente, @MontoPago, @FechaAlquiler, @FechaDevolucion)";
 
 
             string query2 = "INSERT INTO DETALLEFACTURA " +
                              "(IdFactura, IdArticulo, CantidadArticulo) VALUES " +
                              "(@IdFactura, @IdArticulo, @CantidadArticulo)";
-            
+
             SqlTransaction accion = null;
 
             try
@@ -45,17 +45,17 @@ namespace DAL
                 }
 
                 // Insertar en DETALLEFACTURA
-                foreach (var item in factura.detalles)
-                {
-                    using (SqlCommand command1 = new SqlCommand(query2, conexion, accion))
-                    {
-                        command1.Parameters.AddWithValue("@IdFactura", item.idFactura);
-                        command1.Parameters.AddWithValue("@IdArticulo", item.articulo.idArticulo);
-                        command1.Parameters.AddWithValue("@CantidadArticulo", item.cantidadProducto);
+                //foreach (var item in factura.detalles)
+                //{
+                //    using (SqlCommand command1 = new SqlCommand(query2, conexion, accion))
+                //    {
+                //        command1.Parameters.AddWithValue("@IdFactura", item.idFactura);
+                //        command1.Parameters.AddWithValue("@IdArticulo", item.articulo.idArticulo);
+                //        command1.Parameters.AddWithValue("@CantidadArticulo", item.cantidadProducto);
 
-                        command1.ExecuteNonQuery();
-                    }
-                }
+                //        command1.ExecuteNonQuery();
+                //    }
+                //}
 
                 accion.Commit();
             }
@@ -82,7 +82,7 @@ namespace DAL
                 SqlCommand command = new SqlCommand(query, conexion);
                 AbrirConexion();
                 SqlDataReader reader = command.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     facturaList.Add(MapFactura(reader));
                 }
@@ -106,7 +106,7 @@ namespace DAL
                 SqlCommand command = new SqlCommand(query, conexion);
                 AbrirConexion();
                 SqlDataReader reader = command.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     detalleFacturas.Add(MapDetalleFactura(reader));
                 }
@@ -137,7 +137,7 @@ namespace DAL
             try
             {
                 var facturas = leerFactura();
-                if(facturas == null)
+                if (facturas == null)
                 {
                     return null;
                 }
@@ -177,7 +177,7 @@ namespace DAL
         }
         public List<DetalleFactura> GetDetalleFacturas(string idFactura)
         {
-            return LeerDetalleFactura().Where(detalles=>detalles.idFactura.Equals(int.Parse(idFactura))).ToList();
+            return LeerDetalleFactura().Where(detalles => detalles.idFactura.Equals(int.Parse(idFactura))).ToList();
         }
 
         public Articulo ObtenerArticulo(string idArticulo)
@@ -185,5 +185,45 @@ namespace DAL
             return repositorioInventario.EncontrarArticulo(idArticulo);
         }
 
+        public List<Factura> BuscarFacturasPorFecha(DateTime fecha)
+        {
+            List<Factura> facturas = new List<Factura>();
+            string query = "SELECT * FROM FACTURA WHERE CAST(FechaAlquiler AS DATE) = @Fecha";
+
+            try
+            {
+                AbrirConexion();
+                using (SqlCommand command = new SqlCommand(query, conexion))
+                {
+                    command.Parameters.AddWithValue("@Fecha", fecha.Date);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Factura factura = new Factura
+                            {
+                                idFactura = reader["IdFactura"].ToString(),
+                                CedulaCliente = reader["CedulaCliente"].ToString(),
+                                NombreCliente = reader["NombreCliente"].ToString(),
+                                fechaFacturacion = Convert.ToDateTime(reader["FechaAlquiler"]),
+                                fechaDevolucion = Convert.ToDateTime(reader["FechaDevolucion"]),
+                                montoPago = Convert.ToDouble(reader["MontoPago"]),
+                            };
+                            facturas.Add(factura);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar facturas por fecha", ex);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+
+            return facturas;
+        }
     }
 }

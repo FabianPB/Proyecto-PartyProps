@@ -23,8 +23,12 @@ namespace Projectpt1
             {
                 foreach (var item in detalles)
                 {
-
+                    dataGridArtículosDetalle.Rows.Add(item.articulo.idArticulo,item.articulo.categoria,item.articulo.descripcion, item.articulo.existencias, item.articulo.precioAlquiler);
                 }
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron detalles para esta factura.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

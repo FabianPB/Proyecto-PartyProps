@@ -28,5 +28,10 @@ namespace BLL
             return datos.GetDetalleFacturas(idFactura);
         }
 
+        public List<Factura> BuscarPorFecha(DateTime fecha)
+        {
+            return datos.BuscarFacturasPorFecha(fecha);
+        }
+
     }
 }

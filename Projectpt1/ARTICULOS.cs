@@ -21,15 +21,16 @@ namespace Presentacion
         {
             InitializeComponent();
             CargarDatosTabla();
-            cbCategoria.Items.Add("Mesas");
-            cbCategoria.Items.Add("Sillas");
-            cbCategoria.Items.Add("Paredes");
-            cbCategoria.Items.Add("Paneles");
-            cbCategoria.Items.Add("Bases");
-            cbCategoria.Items.Add("Fondos");
-            cbCategoria.Items.Add("Numeros");
-            cbCategoria.Items.Add("Letras");
-            cbCategoria.Items.Add("Letreros");
+            Txt_Id.KeyPress += Txt_Id_KeyPress;
+            txtDescripcion.KeyPress += txtDescripcion_KeyPress;
+            txtPrecio.KeyPress += txtPrecio_KeyPress;
+            txtCantidad.KeyPress += txtCantidad_KeyPress;
+
+            // Añadir categorías
+            cbCategoria.Items.AddRange(new string[]
+            {
+                "Mesas", "Sillas", "Paredes", "Paneles", "Bases", "Fondos", "Numeros", "Letras", "Letreros"
+            });
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -117,10 +118,41 @@ namespace Presentacion
                     dataGridArtículos.Rows.Add(articulo.idArticulo, articulo.descripcion, articulo.categoria, articulo.existencias, articulo.precioAlquiler);
                 }
             }
-            
-
 
         }
+
+        private void Txt_Id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         bool ValidarLetras(string campo)
         {
             foreach (var item in campo)
@@ -201,6 +233,24 @@ namespace Presentacion
                     logica.Eliminar(dataGridArtículos.CurrentRow.Cells["Id"].Value.ToString());
                 }
             }
+        }
+
+        private void Articulos_Resize(object sender, EventArgs e)
+        {
+            CentrarFormulario();
+        }
+
+        private void CentrarFormulario()
+        {
+            
+            Panel panelContent = this.panelArtículos; 
+
+            
+            int x = (this.ClientSize.Width - panelContent.Width) / 2;
+            int y = (this.ClientSize.Height - panelContent.Height) / 6;
+
+            
+            panelContent.Location = new Point(x, y);
         }
 
         private void Articulos_Resize(object sender, EventArgs e)

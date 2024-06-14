@@ -39,7 +39,7 @@
             txtIdFactura = new System.Windows.Forms.TextBox();
             label4 = new System.Windows.Forms.Label();
             btnRegistrar = new System.Windows.Forms.Button();
-            button2 = new System.Windows.Forms.Button();
+            btnLimpiar = new System.Windows.Forms.Button();
             label6 = new System.Windows.Forms.Label();
             dataGridArtículos = new System.Windows.Forms.DataGridView();
             ComId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,9 +63,10 @@
             panel2 = new System.Windows.Forms.Panel();
             label11 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
-            txtCedula = new System.Windows.Forms.TextBox();
             lbArticulo = new System.Windows.Forms.Label();
             lbValor = new System.Windows.Forms.Label();
+            txtCedula = new System.Windows.Forms.TextBox();
+            panelAgendar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridArtículos).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnAgregar).BeginInit();
@@ -76,10 +77,9 @@
             // fecha1
             // 
             fecha1.Cursor = System.Windows.Forms.Cursors.Hand;
-            fecha1.Location = new System.Drawing.Point(45, 309);
-            fecha1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            fecha1.Location = new System.Drawing.Point(49, 427);
             fecha1.Name = "fecha1";
-            fecha1.Size = new System.Drawing.Size(162, 23);
+            fecha1.Size = new System.Drawing.Size(185, 27);
             fecha1.TabIndex = 4;
             // 
             // label1
@@ -87,7 +87,7 @@
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             label1.ForeColor = System.Drawing.Color.Black;
-            label1.Location = new System.Drawing.Point(63, 384);
+            label1.Location = new System.Drawing.Point(60, 288);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(160, 21);
             label1.TabIndex = 5;
@@ -107,19 +107,17 @@
             // fecha2
             // 
             fecha2.Cursor = System.Windows.Forms.Cursors.Hand;
-            fecha2.Location = new System.Drawing.Point(45, 371);
-            fecha2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            fecha2.Location = new System.Drawing.Point(49, 510);
             fecha2.Name = "fecha2";
-            fecha2.Size = new System.Drawing.Size(162, 23);
+            fecha2.Size = new System.Drawing.Size(185, 27);
             fecha2.TabIndex = 7;
             // 
             // txtIdFactura
             // 
             txtIdFactura.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtIdFactura.Location = new System.Drawing.Point(45, 120);
-            txtIdFactura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtIdFactura.Location = new System.Drawing.Point(49, 175);
             txtIdFactura.Name = "txtIdFactura";
-            txtIdFactura.Size = new System.Drawing.Size(162, 23);
+            txtIdFactura.Size = new System.Drawing.Size(185, 27);
             txtIdFactura.TabIndex = 8;
             // 
             // label4
@@ -149,7 +147,7 @@
             btnRegistrar.UseVisualStyleBackColor = false;
             btnRegistrar.Click += btnRegistrar_Click;
             // 
-            // button2
+            // btnLimpiar
             // 
             button2.BackColor = System.Drawing.Color.FromArgb(255, 128, 128);
             button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -213,7 +211,7 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridArtículos.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            dataGridArtículos.Size = new System.Drawing.Size(641, 284);
+            dataGridArtículos.Size = new System.Drawing.Size(733, 379);
             dataGridArtículos.TabIndex = 15;
             dataGridArtículos.CellContentClick += dataGridArtículos_CellContentClick;
             // 
@@ -255,14 +253,17 @@
             // colSubtotal
             // 
             colSubtotal.HeaderText = "Subtotal";
+            colSubtotal.MinimumWidth = 6;
             colSubtotal.Name = "colSubtotal";
-            colSubtotal.Width = 84;
+            colSubtotal.Width = 102;
             // 
             // btnEliminar
             // 
             btnEliminar.HeaderText = "";
+            btnEliminar.Image = (System.Drawing.Image)resources.GetObject("btnEliminar.Image");
+            btnEliminar.MinimumWidth = 6;
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Width = 5;
+            btnEliminar.Width = 6;
             // 
             // panel1
             // 
@@ -317,10 +318,9 @@
             // txtIdArticulo
             // 
             txtIdArticulo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtIdArticulo.Location = new System.Drawing.Point(311, 116);
-            txtIdArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtIdArticulo.Location = new System.Drawing.Point(353, 170);
             txtIdArticulo.Name = "txtIdArticulo";
-            txtIdArticulo.Size = new System.Drawing.Size(72, 23);
+            txtIdArticulo.Size = new System.Drawing.Size(82, 27);
             txtIdArticulo.TabIndex = 19;
             txtIdArticulo.KeyDown += txtIdArticulo_KeyDown;
             // 
@@ -328,9 +328,10 @@
             // 
             btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             btnAgregar.Image = (System.Drawing.Image)resources.GetObject("btnAgregar.Image");
-            btnAgregar.Location = new System.Drawing.Point(843, 99);
+            btnAgregar.Location = new System.Drawing.Point(961, 147);
+            btnAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new System.Drawing.Size(46, 40);
+            btnAgregar.Size = new System.Drawing.Size(53, 53);
             btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             btnAgregar.TabIndex = 22;
             btnAgregar.TabStop = false;
@@ -340,7 +341,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label7.Location = new System.Drawing.Point(384, 116);
+            label7.Location = new System.Drawing.Point(441, 173);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(78, 23);
             label7.TabIndex = 23;
@@ -350,7 +351,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label9.Location = new System.Drawing.Point(719, 120);
+            label9.Location = new System.Drawing.Point(820, 175);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(83, 23);
             label9.TabIndex = 24;
@@ -359,17 +360,16 @@
             // txtCantidad
             // 
             txtCantidad.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtCantidad.Location = new System.Drawing.Point(792, 116);
-            txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            txtCantidad.Location = new System.Drawing.Point(903, 170);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new System.Drawing.Size(45, 23);
+            txtCantidad.Size = new System.Drawing.Size(51, 27);
             txtCantidad.TabIndex = 26;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new System.Drawing.Font("Segoe UI", 10F);
-            label10.Location = new System.Drawing.Point(502, 117);
+            label10.Location = new System.Drawing.Point(635, 174);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(93, 23);
             label10.TabIndex = 27;
@@ -406,62 +406,69 @@
             label12.TabIndex = 29;
             label12.Text = "Cedula :";
             // 
-            // txtCedula
-            // 
-            txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtCedula.Location = new System.Drawing.Point(45, 178);
-            txtCedula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            txtCedula.Name = "txtCedula";
-            txtCedula.Size = new System.Drawing.Size(162, 23);
-            txtCedula.TabIndex = 30;
-            // 
             // lbArticulo
             // 
             lbArticulo.AutoSize = true;
-            lbArticulo.Location = new System.Drawing.Point(464, 122);
+            lbArticulo.Location = new System.Drawing.Point(521, 175);
             lbArticulo.Name = "lbArticulo";
-            lbArticulo.Size = new System.Drawing.Size(0, 15);
+            lbArticulo.Size = new System.Drawing.Size(0, 20);
             lbArticulo.TabIndex = 31;
             // 
             // lbValor
             // 
             lbValor.AutoSize = true;
-            lbValor.Location = new System.Drawing.Point(615, 123);
+            lbValor.Location = new System.Drawing.Point(734, 177);
             lbValor.Name = "lbValor";
-            lbValor.Size = new System.Drawing.Size(0, 15);
+            lbValor.Size = new System.Drawing.Size(0, 20);
             lbValor.TabIndex = 32;
+            // 
+            // txtCedula
+            // 
+            txtCedula.Location = new System.Drawing.Point(49, 257);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new System.Drawing.Size(179, 27);
+            txtCedula.TabIndex = 33;
+            // 
+            // panelAgendar
+            // 
+            panelAgendar.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
+            panelAgendar.Controls.Add(panel1);
+            panelAgendar.Controls.Add(txtCedula);
+            panelAgendar.Controls.Add(fecha1);
+            panelAgendar.Controls.Add(lbValor);
+            panelAgendar.Controls.Add(label1);
+            panelAgendar.Controls.Add(lbArticulo);
+            panelAgendar.Controls.Add(label3);
+            panelAgendar.Controls.Add(label12);
+            panelAgendar.Controls.Add(fecha2);
+            panelAgendar.Controls.Add(panel2);
+            panelAgendar.Controls.Add(txtIdFactura);
+            panelAgendar.Controls.Add(label10);
+            panelAgendar.Controls.Add(label4);
+            panelAgendar.Controls.Add(txtCantidad);
+            panelAgendar.Controls.Add(btnRegistrar);
+            panelAgendar.Controls.Add(label9);
+            panelAgendar.Controls.Add(btnLimpiar);
+            panelAgendar.Controls.Add(label7);
+            panelAgendar.Controls.Add(label6);
+            panelAgendar.Controls.Add(btnAgregar);
+            panelAgendar.Controls.Add(dataGridArtículos);
+            panelAgendar.Controls.Add(label8);
+            panelAgendar.Controls.Add(txtNombreCliente);
+            panelAgendar.Controls.Add(txtIdArticulo);
+            panelAgendar.Controls.Add(label2);
+            panelAgendar.Location = new System.Drawing.Point(1, 0);
+            panelAgendar.Name = "panelAgendar";
+            panelAgendar.Size = new System.Drawing.Size(1017, 717);
+            panelAgendar.TabIndex = 17;
             // 
             // AGENDAR
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
-            ClientSize = new System.Drawing.Size(890, 538);
-            Controls.Add(lbValor);
-            Controls.Add(lbArticulo);
-            Controls.Add(txtCedula);
-            Controls.Add(label12);
-            Controls.Add(panel2);
-            Controls.Add(label10);
-            Controls.Add(txtCantidad);
-            Controls.Add(label9);
-            Controls.Add(label7);
-            Controls.Add(btnAgregar);
-            Controls.Add(label8);
-            Controls.Add(txtIdArticulo);
-            Controls.Add(label2);
-            Controls.Add(txtNombreCliente);
-            Controls.Add(panel1);
-            Controls.Add(dataGridArtículos);
-            Controls.Add(label6);
-            Controls.Add(button2);
-            Controls.Add(btnRegistrar);
-            Controls.Add(label4);
-            Controls.Add(txtIdFactura);
-            Controls.Add(fecha2);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(fecha1);
+            ClientSize = new System.Drawing.Size(1017, 717);
+            Controls.Add(panelAgendar);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "AGENDAR";
             Text = "RESERVAS";
@@ -486,7 +493,7 @@
         private System.Windows.Forms.TextBox txtIdFactura;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridArtículos;
         private System.Windows.Forms.Panel panel1;
@@ -503,9 +510,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label lbArticulo;
         private System.Windows.Forms.Label lbValor;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn ComDescripcion;
@@ -513,5 +521,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ComExistencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubtotal;
         private System.Windows.Forms.DataGridViewImageColumn btnEliminar;
+        private System.Windows.Forms.Panel panelAgendar;
     }
 }
