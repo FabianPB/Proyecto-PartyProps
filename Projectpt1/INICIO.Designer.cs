@@ -66,15 +66,7 @@
             // 
             // label20
             // 
-            label20.AutoSize = true;
-            label20.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
-            label20.Font = new System.Drawing.Font("Showcard Gothic", 25.8000011F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label20.ForeColor = System.Drawing.Color.Black;
-            label20.Location = new System.Drawing.Point(374, 74);
-            label20.Name = "label20";
-            label20.Size = new System.Drawing.Size(310, 54);
-            label20.TabIndex = 9;
-            label20.Text = "PARTYPROpS";
+            
             // 
             // panel7
             // 
@@ -359,7 +351,6 @@
             // 
             panelInicio.BackColor = System.Drawing.Color.FromArgb(255, 227, 234);
             panelInicio.Controls.Add(panel4);
-            panelInicio.Controls.Add(label20);
             panelInicio.Controls.Add(panel6);
             panelInicio.Controls.Add(panel7);
             panelInicio.Location = new System.Drawing.Point(0, 0);
